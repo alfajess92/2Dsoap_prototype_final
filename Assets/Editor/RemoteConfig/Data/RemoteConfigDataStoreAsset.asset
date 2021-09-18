@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
+  m_Name: RemoteConfigDataStoreAsset
+  m_EditorClassIdentifier: 
+  <dataStoreStatus>k__BackingField: 0
+  <configId>k__BackingField: 
+  <currentEnvironmentName>k__BackingField: 
+  <currentEnvironmentId>k__BackingField: 
+  <currentEnvironmentIsDefault>k__BackingField: 0
+  <addedRulesIDs>k__BackingField: []
+  <updatedRulesIDs>k__BackingField: []
+  <deletedRulesIDs>k__BackingField: []
+  _rsKeyList: '[]'
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"05563843-57c7-4a06-b78c-b806a56aa9e3\"\r\n
+    \   },\r\n    \"rs\": {\r\n      \"key\": \"NewTitle\",\r\n      \"type\": \"string\",\r\n
+    \     \"value\": \"Do you like my game?\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"e5736ae6-79eb-4db5-9219-def2f72a83ce\"\r\n    },\r\n
+    \   \"rs\": {\r\n      \"key\": \"trialname\",\r\n      \"type\": \"string\",\r\n
+    \     \"value\": \"newnew\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n
+    \     \"entityId\": \"71217e98-29cc-467b-b617-7788dc23dd99\"\r\n    },\r\n    \"rs\":
+    {\r\n      \"key\": \"myName\",\r\n      \"type\": \"string\",\r\n      \"value\":
+    \"serkan\"\r\n    }\r\n  }\r\n]"
+  _environments: "[\r\n  {\r\n    \"projectId\": \"ab25a489-8c47-431c-b34e-2e3016dc43b2\",\r\n
+    \   \"name\": \"2DSOAPconf\",\r\n    \"id\": \"8ccb74da-be0c-4249-8759-c4f2b6224a79\",\r\n
+    \   \"createdAt\": \"2021-05-28T07:50:34Z\",\r\n    \"updatedAt\": \"2021-05-28T07:58:44Z\",\r\n
+    \   \"isDefault\": true\r\n  },\r\n  {\r\n    \"projectId\": \"ab25a489-8c47-431c-b34e-2e3016dc43b2\",\r\n
+    \   \"name\": \"Production\",\r\n    \"id\": \"d969e0bd-8b1c-4731-80b1-ed26b562683a\",\r\n
+    \   \"createdAt\": \"2021-05-28T07:49:34Z\",\r\n    \"updatedAt\": \"2021-05-28T07:58:44Z\",\r\n
+    \   \"isDefault\": false\r\n  }\r\n]"
+  _rulesList: '[]'
+  _lastCachedRulesList: '[]'
