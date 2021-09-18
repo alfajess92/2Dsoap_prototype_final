@@ -922,7 +922,7 @@ public class LabManagerScript : MonoBehaviour
         if (myFile.Load())
         {
             Debug.Log("LabContent is loaded with " + myFile.GetInt("coins"));
-            CoinTxtlab.text = "Money:" + myFile.GetInt("coins");
+            CoinTxtlab.text = "MONEY:" + myFile.GetInt("coins");
             for (int i = 1; i < 19; i++)
             {
                 //numberBatches = myFile.GetArray<int>("shopItemsQuantity");
@@ -999,7 +999,7 @@ public class LabManagerScript : MonoBehaviour
 
         if (myFile.Load())
         {
-            CoinTxtlab.text = "Money:" + myFile.GetInt("coins");
+            CoinTxtlab.text = "MONEY:" + myFile.GetInt("coins");
             for (int i = 1; i < 19; i++)
             {
                 numberBatches = myFile.GetArray<int>("labItemsQuantity");

@@ -28,7 +28,7 @@ public class SceneSwitcher : MonoBehaviour
 
     public void MeetAaron()
     {
-        SceneManager.LoadScene("scene_aaron");
+        SceneManager.LoadScene("scene_bunno");//change from aaron
     }
 
     public void PlayMenu()

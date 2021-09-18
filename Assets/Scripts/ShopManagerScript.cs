@@ -353,7 +353,7 @@ public class ShopManagerScript : MonoBehaviour
 
                 coins -= ButtonRef.GetComponentInParent<ButtonInfo>().item.buyprice;
                 shopItemsQuantity[ButtonRef.GetComponentInParent<ButtonInfo>().ItemID]++;
-                CoinsTXT.text = "Money:" + coins.ToString();
+                CoinsTXT.text = "MONEY:" + coins.ToString();
                 ButtonRef.GetComponentInParent<ButtonInfo>().QuantityTxt.text = shopItemsQuantity[ButtonRef.GetComponentInParent<ButtonInfo>().ItemID].ToString();
 
                 //Create new item in lab and if equipment, unstack
@@ -476,7 +476,7 @@ public class ShopManagerScript : MonoBehaviour
 
                     coins += ButtonRef.GetComponentInParent<ButtonInfo>().item.sellprice;
                     shopItemsQuantity[ButtonRef.GetComponentInParent<ButtonInfo>().ItemID]--;
-                    CoinsTXT.text = "Money:" + coins.ToString();
+                    CoinsTXT.text = "MONEY:" + coins.ToString();
                     ButtonRef.GetComponentInParent<ButtonInfo>().QuantityTxt.text = shopItemsQuantity[ButtonRef.GetComponentInParent<ButtonInfo>().ItemID].ToString();
                     //remove item from itemLabType array 
                     RemoveItem(ButtonRef.GetComponentInParent<ButtonInfo>().item);
@@ -669,7 +669,7 @@ public class ShopManagerScript : MonoBehaviour
         //see EasyFileSave manual for more
         myFile.Add("coins", coins);
         Debug.Log(">> Money saved: " + coins);
-        CoinsTXT.text = "Money:" + coins;
+        CoinsTXT.text = "MONEY:" + coins;
 
         //isRead = false;
         //Static bool to check if Labtypes where read once
@@ -718,7 +718,7 @@ public class ShopManagerScript : MonoBehaviour
         if (myFile.Load())
         {
             Debug.Log(">> Content is loaded with money " + myFile.GetInt("coins"));
-            CoinsTXT.text = "Money:" + myFile.GetInt("coins");
+            CoinsTXT.text = "MONEY:" + myFile.GetInt("coins");
 
             for (int i = 1; i < 19; i++)
             {

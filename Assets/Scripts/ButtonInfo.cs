@@ -56,8 +56,8 @@ public class ButtonInfo : MonoBehaviour
         if (item != null)
         {
             name_item.text = item.name_item;
-            PriceTxt.text = "Buy: " + item.buyprice.ToString();
-            SellTxt.text = "Sell: " + item.sellprice.ToString();
+            PriceTxt.text = "BUY: " + item.buyprice.ToString();
+            SellTxt.text = "SELL: " + item.sellprice.ToString();
             artworkImageSell.sprite = item.artwork;
             artworkImageBuy.sprite = item.artwork;
             //QuantityTxt.text = shopManagerScript.shopItemsQuantity[ItemID].ToString();
@@ -79,7 +79,7 @@ public class ButtonInfo : MonoBehaviour
         if (item != null)
         {
             name_item.text = item.name_item;
-            PriceTxt.text = "Buy: " + item.buyprice.ToString();
+            PriceTxt.text = "BUY: " + item.buyprice.ToString();
             SellTxt.text = "";
             artworkImageSell.sprite = item.artwork;
             artworkImageBuy.sprite = item.artwork;
@@ -121,7 +121,7 @@ public class ButtonInfo : MonoBehaviour
         {
             name_item.text = item.name_item;
             PriceTxt.text = "";
-            SellTxt.text = "Sell: " + item.sellprice.ToString();
+            SellTxt.text = "SELL: " + item.sellprice.ToString();
             artworkImageSell.sprite = item.artwork;
             artworkImageBuy.sprite = item.artwork;
             //QuantityTxt.text = shopManagerScript.shopItemsQuantity[ItemID].ToString();
@@ -177,7 +177,7 @@ public class ButtonInfo : MonoBehaviour
 
             if (item != null)
             {
-                SellTxt.text = "Sell: " + sellvalue.ToString();
+                SellTxt.text = "SELL: " + sellvalue.ToString();
                 print("this is the new sell price" + sellvalue);
 
             }
@@ -217,7 +217,7 @@ public class ButtonInfo : MonoBehaviour
 
             if (item != null)
             {
-                SellTxt.text = "Sell: " + sellvalue.ToString();
+                SellTxt.text = "SELL: " + sellvalue.ToString();
                 print("this is the new sell price" + sellvalue);
 
             }
@@ -234,7 +234,7 @@ public class ButtonInfo : MonoBehaviour
             int sellvalue = item.sellprice -= 5;
             if (item != null)
             {
-                SellTxt.text = "Sell: " + sellvalue.ToString();
+                SellTxt.text = "SELL: " + sellvalue.ToString();
             }
         }
         updateSubstance = false;
@@ -251,7 +251,7 @@ public class ButtonInfo : MonoBehaviour
 
             if (item != null)
             {
-                SellTxt.text = "Sell: " + sellvalue.ToString();
+                SellTxt.text = "SELL: " + sellvalue.ToString();
                 print("this is the new sell price" + sellvalue);
 
             }
@@ -269,7 +269,7 @@ public class ButtonInfo : MonoBehaviour
             int sellvalue = item.sellprice;
             if (item != null)
             {
-                SellTxt.text = "Sell: " + sellvalue.ToString();
+                SellTxt.text = "SELL: " + sellvalue.ToString();
             }
         }
         updateSoap = false;

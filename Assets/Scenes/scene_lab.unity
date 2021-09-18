@@ -892,13 +892,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5049401464335093328, guid: c5bb0892e34394df68c7427746625fbd,
         type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 1042b0044a74e4fd7afe1d5338556609,
+        type: 3}
+    - target: {fileID: 5049401464335093328, guid: c5bb0892e34394df68c7427746625fbd,
+        type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5049401464335093328, guid: c5bb0892e34394df68c7427746625fbd,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 25
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5049401464335093328, guid: c5bb0892e34394df68c7427746625fbd,
         type: 3}
@@ -1038,7 +1044,7 @@ PrefabInstance:
     - target: {fileID: 5049401465908696539, guid: c5bb0892e34394df68c7427746625fbd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 407.7
+      value: 429
       objectReference: {fileID: 0}
     - target: {fileID: 5049401465908696539, guid: c5bb0892e34394df68c7427746625fbd,
         type: 3}
@@ -2154,6 +2160,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1852639839159088478, guid: 7a5da248aa437425e9d865425903efe9,
         type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f0886a90a723b49eaa40439929c76e91,
+        type: 2}
+    - target: {fileID: 1852639839159088478, guid: 7a5da248aa437425e9d865425903efe9,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852639839159088478, guid: 7a5da248aa437425e9d865425903efe9,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1904429448722215936, guid: f0886a90a723b49eaa40439929c76e91,
+        type: 2}
+    - target: {fileID: 1852639839159088478, guid: 7a5da248aa437425e9d865425903efe9,
+        type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852639839159088478, guid: 7a5da248aa437425e9d865425903efe9,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852639839159088478, guid: 7a5da248aa437425e9d865425903efe9,
+        type: 3}
       propertyPath: m_textInfo.lineCount
       value: 1
       objectReference: {fileID: 0}
@@ -2166,6 +2199,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.wordCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852639839159088478, guid: 7a5da248aa437425e9d865425903efe9,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1852639839159088478, guid: 7a5da248aa437425e9d865425903efe9,
         type: 3}
@@ -2403,8 +2441,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -485.1, y: -360.95}
-  m_SizeDelta: {x: 353.3, y: 39.785}
+  m_AnchoredPosition: {x: -457, y: -360.34}
+  m_SizeDelta: {x: 405.2535, y: 41.003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &266529417
 MonoBehaviour:
@@ -2427,19 +2465,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4, type: 3}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: 1042b0044a74e4fd7afe1d5338556609, type: 3}
+    m_FontSize: 70
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 70
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Money: 0'
+  m_Text: 'MONEY: 0'
 --- !u!222 &266529418
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7166,7 +7204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.7, y: 22.7}
+  m_AnchoredPosition: {x: -16.7, y: 26}
   m_SizeDelta: {x: 194.57, y: 37.5}
   m_Pivot: {x: 0.5, y: 0.69897133}
 --- !u!114 &1245862445
@@ -7191,8 +7229,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Go to shop
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f0886a90a723b49eaa40439929c76e91, type: 2}
+  m_sharedMaterial: {fileID: 1904429448722215936, guid: f0886a90a723b49eaa40439929c76e91,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7216,13 +7255,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -7252,7 +7291,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -34.21591, y: 53.59735, z: -65.806335, w: 20.069977}
+  m_margin: {x: -40.127777, y: 53.59735, z: -73.196106, w: 20.069977}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7794,7 +7833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 212, y: 382}
+  m_AnchoredPosition: {x: 270, y: 382}
   m_SizeDelta: {x: 292.15, y: 106.7}
   m_Pivot: {x: 0.5, y: 0.69897133}
 --- !u!114 &1409480398
@@ -7819,8 +7858,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Laboratory
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f0886a90a723b49eaa40439929c76e91, type: 2}
+  m_sharedMaterial: {fileID: 1904429448722215936, guid: f0886a90a723b49eaa40439929c76e91,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7844,13 +7884,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
