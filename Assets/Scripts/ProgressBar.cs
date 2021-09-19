@@ -89,7 +89,9 @@ public class ProgressBar : MonoBehaviour
     public void Start()
     {
         //audio
-        audiocontroller = GetComponentInParent<Audiocontroller>();
+        //audiocontroller = GetComponentInParent<Audiocontroller>();
+        audiocontroller = GameObject.Find("audio").GetComponent<Audiocontroller>();
+
         fXController_Lab = GetComponentInParent<FXController_Lab>();
 
         inventoryDictionary = GetComponentInParent<InventoryDictionary>();
@@ -213,17 +215,20 @@ public class ProgressBar : MonoBehaviour
 
             if (progressTick > progressTickMax)
             {
+                Debug.Log("enter final progress step");
                 //Process is completed
                 isUpdating = false;
                 isOff = false;
 
 
-                audiocontroller.PlayProduce();
+                //audiocontroller.PlayProduce();
+
                 //fXController_Lab.PlayOn();
                 fXController_Lab.PlayAppear();
 
                 if (buttonInfoLab.item.name_item== "Curing Form")
                 {
+                    audiocontroller.PlayProduce();
                     audiocontroller.StopCureSound();
                     Debug.Log("the sound of curing form is off");
 
@@ -231,6 +236,7 @@ public class ProgressBar : MonoBehaviour
 
                 if (buttonInfoLab.item.name_item == "Heating Pot 200W" || buttonInfoLab.item.name_item == "Heating Pot 400W" || buttonInfoLab.item.name_item == "Heating Pot 600W")
                 {
+                    audiocontroller.PlayProduceTrace();
                     audiocontroller.StopHeat();
                     Debug.Log("the sound of heat is off");
                 }

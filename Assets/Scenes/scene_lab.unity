@@ -1061,10 +1061,62 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5049401466189027208, guid: c5bb0892e34394df68c7427746625fbd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5049401466189027211, guid: c5bb0892e34394df68c7427746625fbd,
         type: 3}
       propertyPath: m_text
       value: '>>'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5049401466189027211, guid: c5bb0892e34394df68c7427746625fbd,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5049401466189027211, guid: c5bb0892e34394df68c7427746625fbd,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 137.31259
+      objectReference: {fileID: 0}
+    - target: {fileID: 5049401466189027211, guid: c5bb0892e34394df68c7427746625fbd,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -6.092987
+      objectReference: {fileID: 0}
+    - target: {fileID: 5049401466189027211, guid: c5bb0892e34394df68c7427746625fbd,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f0886a90a723b49eaa40439929c76e91,
+        type: 2}
+    - target: {fileID: 5049401466189027211, guid: c5bb0892e34394df68c7427746625fbd,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5049401466189027211, guid: c5bb0892e34394df68c7427746625fbd,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 5049401466189027211, guid: c5bb0892e34394df68c7427746625fbd,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1904429448722215936, guid: f0886a90a723b49eaa40439929c76e91,
+        type: 2}
+    - target: {fileID: 5049401466189027211, guid: c5bb0892e34394df68c7427746625fbd,
+        type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 5049401466189027211, guid: c5bb0892e34394df68c7427746625fbd,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 5049401466189027211, guid: c5bb0892e34394df68c7427746625fbd,
         type: 3}
@@ -1080,6 +1132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.wordCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5049401466189027211, guid: c5bb0892e34394df68c7427746625fbd,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5049401466189027211, guid: c5bb0892e34394df68c7427746625fbd,
         type: 3}
@@ -2160,10 +2217,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1852639839159088478, guid: 7a5da248aa437425e9d865425903efe9,
         type: 3}
+      propertyPath: m_fontSize
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852639839159088478, guid: 7a5da248aa437425e9d865425903efe9,
+        type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: f0886a90a723b49eaa40439929c76e91,
         type: 2}
+    - target: {fileID: 1852639839159088478, guid: 7a5da248aa437425e9d865425903efe9,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 1852639839159088478, guid: 7a5da248aa437425e9d865425903efe9,
         type: 3}
       propertyPath: m_textAlignment
@@ -2209,6 +2276,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.characterCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852639839159088479, guid: 7a5da248aa437425e9d865425903efe9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 1852639839675744450, guid: 7a5da248aa437425e9d865425903efe9,
         type: 3}
@@ -6267,6 +6339,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1982672533}
     m_Modifications:
+    - target: {fileID: 1047638723882032741, guid: 89392782c98834934a8d66a4793215df,
+        type: 3}
+      propertyPath: Produce
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667090621461421887, guid: 89392782c98834934a8d66a4793215df,
+        type: 3}
+      propertyPath: Click
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667090621461421887, guid: 89392782c98834934a8d66a4793215df,
+        type: 3}
+      propertyPath: Produce
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667090621461421887, guid: 89392782c98834934a8d66a4793215df,
+        type: 3}
+      propertyPath: ProduceTrace
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4983982863361023932, guid: 89392782c98834934a8d66a4793215df,
         type: 3}
       propertyPath: m_Pivot.x
@@ -6834,6 +6926,21 @@ PrefabInstance:
       propertyPath: labManager
       value: 
       objectReference: {fileID: 200312528}
+    - target: {fileID: 1667090621461421887, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
+      propertyPath: Cure
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667090621461421887, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
+      propertyPath: Produce
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667090621461421887, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4836661306477435836, guid: 5709636ec66514c5db42ce5bec66b60c,
         type: 3}
       propertyPath: isOnPressed
@@ -6949,6 +7056,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item_lab_curing
       objectReference: {fileID: 0}
+    - target: {fileID: 6156376059961631360, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
+      propertyPath: Produce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156376059961631360, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
+      propertyPath: ProduceTrace
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6699001787979664134, guid: 5709636ec66514c5db42ce5bec66b60c,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -6976,18 +7093,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8020099229095255353, guid: 5709636ec66514c5db42ce5bec66b60c,
         type: 3}
+      propertyPath: Buy
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020099229095255353, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
       propertyPath: Cure
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8020099229095255353, guid: 5709636ec66514c5db42ce5bec66b60c,
         type: 3}
+      propertyPath: Drop
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020099229095255353, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
       propertyPath: Heat
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020099229095255353, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
+      propertyPath: Pour
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020099229095255353, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
+      propertyPath: Sell
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020099229095255353, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
+      propertyPath: Click
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8020099229095255353, guid: 5709636ec66514c5db42ce5bec66b60c,
         type: 3}
       propertyPath: Produce
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020099229095255353, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
+      propertyPath: MoveItem
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020099229095255353, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
+      propertyPath: SwitchLab
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020099229095255353, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
+      propertyPath: SwitchShop
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020099229095255353, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
+      propertyPath: ProduceTrace
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8047970452428804076, guid: 5709636ec66514c5db42ce5bec66b60c,
         type: 3}
@@ -7013,6 +7175,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayCureSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047970452428804076, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Audiocontroller, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8047970452428804076, guid: 5709636ec66514c5db42ce5bec66b60c,
         type: 3}
@@ -7941,6 +8108,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1982672533}
     m_Modifications:
+    - target: {fileID: 1667090621461421887, guid: 90bddf48d58244de68fc6bb0da93ac50,
+        type: 3}
+      propertyPath: Click
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667090621461421887, guid: 90bddf48d58244de68fc6bb0da93ac50,
+        type: 3}
+      propertyPath: Produce
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667090621461421887, guid: 90bddf48d58244de68fc6bb0da93ac50,
+        type: 3}
+      propertyPath: ProduceTrace
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3092489336948605021, guid: 90bddf48d58244de68fc6bb0da93ac50,
         type: 3}
       propertyPath: Produce
@@ -8055,6 +8237,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: item_lab_HP400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941473841259801638, guid: 90bddf48d58244de68fc6bb0da93ac50,
+        type: 3}
+      propertyPath: Produce
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7398668861785543339, guid: 90bddf48d58244de68fc6bb0da93ac50,
         type: 3}
@@ -8933,6 +9120,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1982672533}
     m_Modifications:
+    - target: {fileID: 1667090621461421887, guid: 80a9f6ea2ffee44789a0398c86ea7084,
+        type: 3}
+      propertyPath: Produce
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667090621461421887, guid: 80a9f6ea2ffee44789a0398c86ea7084,
+        type: 3}
+      propertyPath: ProduceTrace
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853039789597288581, guid: 80a9f6ea2ffee44789a0398c86ea7084,
+        type: 3}
+      propertyPath: Produce
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4983982863361023932, guid: 80a9f6ea2ffee44789a0398c86ea7084,
         type: 3}
       propertyPath: m_Pivot.x
@@ -11919,6 +12121,11 @@ PrefabInstance:
       propertyPath: Loop
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 584960158192394612, guid: 8231a252b2b5b4cc58f1828f8241aac9,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7031ec382f001425da591f898d56af26, type: 3}
     - target: {fileID: 584960158750672888, guid: 8231a252b2b5b4cc58f1828f8241aac9,
         type: 3}
       propertyPath: m_RootOrder
@@ -11989,6 +12196,11 @@ PrefabInstance:
       propertyPath: produceTrace
       value: 
       objectReference: {fileID: 584960159485791091}
+    - target: {fileID: 584960159460163006, guid: 8231a252b2b5b4cc58f1828f8241aac9,
+        type: 3}
+      propertyPath: m_Name
+      value: Produce
+      objectReference: {fileID: 0}
     - target: {fileID: 584960159460163007, guid: 8231a252b2b5b4cc58f1828f8241aac9,
         type: 3}
       propertyPath: m_audioClip

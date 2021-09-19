@@ -51,9 +51,10 @@ public class EquipmentSlot : MonoBehaviour
 
         //Inventory
         inventoryDictionary = GetComponent<InventoryDictionary>();
-       
+
         //Audio
         audiocontroller = GetComponent<Audiocontroller>();
+        //audiocontroller = GameObject.Find("audio").GetComponent<Audiocontroller>();
 
         //FX
         fXController = GetComponent<FXController_Lab>();
@@ -375,7 +376,7 @@ public class EquipmentSlot : MonoBehaviour
     //To create instance inside Update
     public IEnumerator CreateSoapAfterTime(int value)
     {
-        yield return WaitForDone(91f);// wait for done or 46/91 seconds, whichever comes first. 
+        yield return WaitForDone(120f);// wait for done or 46/91 seconds, whichever comes first. 
 
         if (!progressBar.isUpdating&&!progressBar.isOff)
         {
@@ -397,7 +398,7 @@ public class EquipmentSlot : MonoBehaviour
    public IEnumerator CreateTraceAfterTime()
     {
 
-        yield return WaitForDone(61f);// wait for done or 31/61 seconds, whichever comes first. 
+        yield return WaitForDone(70f);// wait for done or 31/61 seconds, whichever comes first. //TODO take the time from inventory if switch scenes
 
         if (!progressBar.isUpdating && !progressBar.isOff)
         {
