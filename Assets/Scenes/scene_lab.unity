@@ -1815,7 +1815,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &218999732
 PrefabInstance:
@@ -3315,7 +3315,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &432970071 stripped
 MonoBehaviour:
@@ -6106,7 +6106,7 @@ RectTransform:
   - {fileID: 1123685791}
   - {fileID: 127880414}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6492,7 +6492,7 @@ PrefabInstance:
     - target: {fileID: 8047970452428804076, guid: 89392782c98834934a8d66a4793215df,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8047970452428804076, guid: 89392782c98834934a8d66a4793215df,
         type: 3}
@@ -6693,7 +6693,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1196768397 stripped
 MonoBehaviour:
@@ -6914,6 +6914,8 @@ MonoBehaviour:
   ProduceTrace: 0
   Cure: 0
   Click: 0
+  heat: 0
+  cure: 0
 --- !u!1001 &1227888841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7164,7 +7166,7 @@ PrefabInstance:
     - target: {fileID: 8047970452428804076, guid: 5709636ec66514c5db42ce5bec66b60c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8047970452428804076, guid: 5709636ec66514c5db42ce5bec66b60c,
         type: 3}
@@ -7760,7 +7762,7 @@ Transform:
   - {fileID: 1982672533}
   - {fileID: 1803158079}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1324702493
 GameObject:
@@ -8266,7 +8268,7 @@ PrefabInstance:
     - target: {fileID: 8047970452428804076, guid: 90bddf48d58244de68fc6bb0da93ac50,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8047970452428804076, guid: 90bddf48d58244de68fc6bb0da93ac50,
         type: 3}
@@ -9278,7 +9280,7 @@ PrefabInstance:
     - target: {fileID: 8047970452428804076, guid: 80a9f6ea2ffee44789a0398c86ea7084,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8047970452428804076, guid: 80a9f6ea2ffee44789a0398c86ea7084,
         type: 3}
@@ -12139,7 +12141,7 @@ PrefabInstance:
     - target: {fileID: 584960158750672888, guid: 8231a252b2b5b4cc58f1828f8241aac9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 584960158750672888, guid: 8231a252b2b5b4cc58f1828f8241aac9,
         type: 3}
@@ -12742,8 +12744,11 @@ MonoBehaviour:
   curingtime: 0
   processTime: 0
   buttonInfoLab: {fileID: 0}
+  buttonInfoLabItem: {fileID: 0}
   process: 0
   power: 0
+  audiocontroller: {fileID: 0}
+  globalAudioController: {fileID: 0}
   labManager: {fileID: 0}
   labManagerScript: {fileID: 0}
 --- !u!114 &6409220531648345989

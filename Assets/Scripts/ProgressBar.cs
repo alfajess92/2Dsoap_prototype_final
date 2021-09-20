@@ -73,6 +73,9 @@ public class ProgressBar : MonoBehaviour
         //Find LabManager in the scene and define it once
         labManager = GameObject.Find("LabManager");
         labManagerScript = labManager.GetComponent<LabManagerScript>();
+        //audiocontroller = GameObject.Find("audio").GetComponent<Audiocontroller>();
+        //globalAudioController = GameObject.Find("Sounds").GetComponent<GlobalAudioController>();
+        //Debug.Log("awake audio");
 
     }
 
@@ -91,8 +94,9 @@ public class ProgressBar : MonoBehaviour
     {
         //audio
         //audiocontroller = GetComponentInParent<Audiocontroller>();
-        audiocontroller = GameObject.Find("audio").GetComponent<Audiocontroller>();
-        globalAudioController = GameObject.Find("Sounds").GetComponent<GlobalAudioController>();
+        //audiocontroller = GameObject.Find("audio").GetComponent<Audiocontroller>();
+        //globalAudioController = GameObject.Find("Sounds").GetComponent<GlobalAudioController>();
+        //globalAudioController.Init
 
 
         fXController_Lab = GetComponentInParent<FXController_Lab>();
@@ -261,24 +265,25 @@ public class ProgressBar : MonoBehaviour
                 isOff = false;
 
 
-                audiocontroller.PlayProduce();
+                //audiocontroller.PlayProduce();
 
                 //fXController_Lab.PlayOn();
                 fXController_Lab.PlayAppear();
 
                 if (buttonInfoLab.item.name_item== "Curing Form")
                 {
-                    //audiocontroller.PlayProduce();
-                    audiocontroller.StopCureSound();
+                    
+                    //**
+                    //audiocontroller.StopCureSound();
                     Debug.Log("the sound of curing form is off");
 
                 }
 
                 if (buttonInfoLab.item.name_item == "Heating Pot 200W" || buttonInfoLab.item.name_item == "Heating Pot 400W" || buttonInfoLab.item.name_item == "Heating Pot 600W")
                 {
-                    //audiocontroller.PlayProduceTrace();
-                    //audiocontroller.PlayProduce();
-                    audiocontroller.StopHeat();
+
+                    //**
+                    //audiocontroller.StopHeat();
                     Debug.Log("the sound of heat is off");
                 }
 
@@ -306,27 +311,29 @@ public class ProgressBar : MonoBehaviour
                 //Set the progress bar to current normalized value 
                 //this.SetProgress(progressTick);
 
-                if (buttonInfoLab.item.name_item == "Curing Form")
-                {
 
-                    //audiocontroller.cure = true;
-                    if (!globalAudioController.cure.isPlaying)
-                    {
-                        globalAudioController.PlaySound(PlayableSounds.cure);
-                    }
-                    
-                }
+                //*****
+                //if (buttonInfoLab.item.name_item == "Curing Form")
+                //{
 
-                if (buttonInfoLab.item.name_item == "Heating Pot 200W" || buttonInfoLab.item.name_item == "Heating Pot 400W" || buttonInfoLab.item.name_item == "Heating Pot 600W")
-                {
-                    //audiocontroller.heat = true;
-                    if (!globalAudioController.heat.isPlaying)
-                    {
-                        globalAudioController.PlaySound(PlayableSounds.heat);
-                    }
-                       
-                }
+                //    //audiocontroller.cure = true;
+                //    if (!globalAudioController.cure.isPlaying)
+                //    {
+                //        globalAudioController.PlaySound(PlayableSounds.cure);
+                //    }
 
+                //}
+
+                //if (buttonInfoLab.item.name_item == "Heating Pot 200W" || buttonInfoLab.item.name_item == "Heating Pot 400W" || buttonInfoLab.item.name_item == "Heating Pot 600W")
+                //{
+                //    //audiocontroller.heat = true;
+                //    if (!globalAudioController.heat.isPlaying)
+                //    {
+                //        globalAudioController.PlaySound(PlayableSounds.heat);
+                //    }
+
+                //}
+                //*****
 
             }
         }
