@@ -35,3 +35,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Build_ios/Classes/CrashReporter.h
+Build_ios/
+Build_ios_1/
+Logs/
