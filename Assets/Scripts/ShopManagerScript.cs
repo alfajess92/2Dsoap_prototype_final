@@ -216,7 +216,19 @@ public class ShopManagerScript : MonoBehaviour
         if (isRead)
         {
             Debug.Log("reading types from last session");
+            //for (int i = 1; i < 19; i++)
+            //{
+            //    itemsTypeLab = new string[19];
+            //    if (itemsTypeLab[i] == null)
+            //    {
+            //        itemsTypeLab[i] = "Empty";
+            //        Debug.Log("catching initial error");
+            //    }
+            //    //else()
+            //}
+                
             return;
+
         }
 
         itemsTypeLab = new string[19];
@@ -232,11 +244,30 @@ public class ShopManagerScript : MonoBehaviour
             }
             else
             {
+                //itemsTypeLab[i] = itemsTypeShop[i];
                 //itemsTypeLab[i] = itemsTypeLab
                 //Debug.Log("reading types from last session");
             }
                 //itemsTypeLab[i] = "Empty";// itemsTypeLab[i] = itemsTypeShop[i]; 
         }
+
+
+        //for (int i = 1; i < 19; i++)
+        //{
+        //    //when is called for the first time, start lab as in the shop
+        //    if (itemsTypeLab[i] == null)
+        //    {
+        //        itemsTypeLab[i] = "Empty";
+        //        isRead = true;
+        //        Debug.Log("reading types for lab for the first time");
+        //    }
+        //    else
+        //    {
+        //        //itemsTypeLab[i] = itemsTypeLab
+        //        //Debug.Log("reading types from last session");
+        //    }
+        //    //itemsTypeLab[i] = "Empty";// itemsTypeLab[i] = itemsTypeShop[i]; 
+        //}
 
     } //Read the types that come from lab
 

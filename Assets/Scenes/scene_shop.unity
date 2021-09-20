@@ -987,6 +987,8 @@ MonoBehaviour:
   ProduceTrace: 0
   Cure: 0
   Click: 12
+  heat: 0
+  cure: 0
 --- !u!114 &77364251 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4205326287658099258, guid: 5a11ed1b4a1c2ae43829efa962022939,
@@ -1657,7 +1659,7 @@ MonoBehaviour:
   - 
   - 
   itemsTypeLab: []
-  coins: 2500
+  coins: 250
   CoinsTXT: {fileID: 266529417}
   HeatingPot200: {fileID: 11400000, guid: e98f067d0aca24e6aaaa1d02624bdca7, type: 2}
   HeatingPot400: {fileID: 11400000, guid: 5e215ea09479d4ef6854b88a8f52f7ba, type: 2}
@@ -1686,6 +1688,7 @@ MonoBehaviour:
   chatManagerScript: {fileID: 1890138444}
   chatTriggerScript: {fileID: 970364032}
   colorChanger: {fileID: 553320970}
+  globalAudioController: {fileID: 0}
 --- !u!4 &200312530
 Transform:
   m_ObjectHideFlags: 0
@@ -4747,6 +4750,8 @@ MonoBehaviour:
   ProduceTrace: 0
   Cure: 0
   Click: 0
+  heat: 0
+  cure: 0
 --- !u!1001 &1235797080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5600,6 +5605,7 @@ MonoBehaviour:
   chatManagerScript: {fileID: 1890138444}
   chatTriggerScript: {fileID: 970364032}
   colorChanger: {fileID: 553320970}
+  globalAudioController: {fileID: 0}
 --- !u!4 &1380039675
 Transform:
   m_ObjectHideFlags: 0
@@ -6803,6 +6809,8 @@ MonoBehaviour:
   ProduceTrace: 0
   Cure: 0
   Click: 12
+  heat: 0
+  cure: 0
 --- !u!114 &1583450710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7219,6 +7227,7 @@ MonoBehaviour:
   chatManagerScript: {fileID: 1890138444}
   chatTriggerScript: {fileID: 970364032}
   colorChanger: {fileID: 553320970}
+  globalAudioController: {fileID: 0}
 --- !u!4 &1671810953
 Transform:
   m_ObjectHideFlags: 0
@@ -7904,6 +7913,8 @@ MonoBehaviour:
   ProduceTrace: 0
   Cure: 0
   Click: 12
+  heat: 0
+  cure: 0
 --- !u!1 &1863565457 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4205326287031965176, guid: 5a11ed1b4a1c2ae43829efa962022939,
