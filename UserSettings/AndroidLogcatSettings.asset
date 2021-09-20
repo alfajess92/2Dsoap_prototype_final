@@ -3,23 +3,11 @@
     "m_SelectedPackage": {
         "deviceId": "RFCR20XHCDL",
         "name": "com.Soap2D.SoapChallenge",
-        "processId": 29643,
+        "processId": 23213,
         "exited": false
     },
     "m_SelectedPriority": 2,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "RFCR20XHCDL",
-            "name": "com.Soap2D.SoapChallenge",
-            "processId": 8983,
-            "exited": true
-        },
-        {
-            "deviceId": "RFCR20XHCDL",
-            "name": "com.Soap2D.SoapChallenge",
-            "processId": 20611,
-            "exited": true
-        },
         {
             "deviceId": "RFCR20XHCDL",
             "name": "com.sec.android.app.launcher",
@@ -29,25 +17,37 @@
         {
             "deviceId": "RFCR20XHCDL",
             "name": "com.Soap2D.SoapChallenge",
-            "processId": 22362,
+            "processId": 4731,
             "exited": true
         },
         {
             "deviceId": "RFCR20XHCDL",
             "name": "com.Soap2D.SoapChallenge",
-            "processId": 24530,
+            "processId": 6480,
             "exited": true
         },
         {
             "deviceId": "RFCR20XHCDL",
             "name": "com.Soap2D.SoapChallenge",
-            "processId": 27543,
+            "processId": 8241,
             "exited": true
         },
         {
             "deviceId": "RFCR20XHCDL",
             "name": "com.Soap2D.SoapChallenge",
-            "processId": 29643,
+            "processId": 9281,
+            "exited": true
+        },
+        {
+            "deviceId": "RFCR20XHCDL",
+            "name": "com.Soap2D.SoapChallenge",
+            "processId": 12147,
+            "exited": true
+        },
+        {
+            "deviceId": "RFCR20XHCDL",
+            "name": "com.Soap2D.SoapChallenge",
+            "processId": 23213,
             "exited": false
         }
     ],

@@ -109,6 +109,7 @@ public class ShopManagerScript : MonoBehaviour
 
     //Reference color changer
     public GameObject colorChanger;
+    public GlobalAudioController globalAudioController;
 
 
     //First to be called
@@ -167,6 +168,7 @@ public class ShopManagerScript : MonoBehaviour
         colorChanger = GameObject.Find("ColorChanger");
 
         Checkbuysell();
+        globalAudioController = GameObject.Find("Sounds").GetComponent<GlobalAudioController>();
     }
 
 
@@ -481,6 +483,8 @@ public class ShopManagerScript : MonoBehaviour
                     //remove item from itemLabType array 
                     RemoveItem(ButtonRef.GetComponentInParent<ButtonInfo>().item);
 
+
+
                 //Random items
 
                 //Reset Color change if a crayon is sold
@@ -520,8 +524,8 @@ public class ShopManagerScript : MonoBehaviour
 
                     }
                 }
-
                 ButtonRef.GetComponentInParent<ButtonInfo>().CheckSell();//checks if this item can be buy
+                
             }
         }
         //UpdateLabelsSell(); //TEST
@@ -534,6 +538,22 @@ public class ShopManagerScript : MonoBehaviour
             //Find item that have "empty" Scriptable Objects 
             if (itemsTypeLab[i] == item.name_item)//To find the first spot with the same name
             {
+                if (inventories[i].progress >= 0)
+                {
+                    Debug.Log("Stop sound");
+                    if(item.name_item=="Curing Form")
+                    {
+                        globalAudioController.StopSound(PlayableSounds.cure);
+                        Debug.Log("Stop cure sound");
+                    }
+
+                    if(item.name_item== "Heating Pot 200W"|| item.name_item == "Heating Pot 400W" || item.name_item == "Heating Pot 600W")
+                    {
+                        globalAudioController.StopSound(PlayableSounds.heat);
+                        Debug.Log("Stop heating sound");
+                    }
+                }
+
                 itemsTypeLab[i] = "Empty";
                 break;
             }

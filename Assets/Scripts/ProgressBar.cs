@@ -29,6 +29,7 @@ public class ProgressBar : MonoBehaviour
     public float processTime;
 
     public ButtonInfoLab buttonInfoLab;
+    public ButtonInfoLabItem buttonInfoLabItem;
     public ProcessType process;
     public int power;
 
@@ -36,8 +37,8 @@ public class ProgressBar : MonoBehaviour
     private InventoryDictionary inventoryDictionary;
 
     //audio
-    private Audiocontroller audiocontroller;
-    //private GlobalAudioController globalAudioController;
+    public  Audiocontroller audiocontroller;
+    public  GlobalAudioController globalAudioController;
     //public AudioSource heat;
 
     //FX
@@ -91,6 +92,8 @@ public class ProgressBar : MonoBehaviour
         //audio
         //audiocontroller = GetComponentInParent<Audiocontroller>();
         audiocontroller = GameObject.Find("audio").GetComponent<Audiocontroller>();
+        globalAudioController = GameObject.Find("Sounds").GetComponent<GlobalAudioController>();
+
 
         fXController_Lab = GetComponentInParent<FXController_Lab>();
 
@@ -99,8 +102,34 @@ public class ProgressBar : MonoBehaviour
         processTime = TimeTickSystem.tickinseconds;//set the process to the TICK MAX 
         buttonInfoLab = GetComponentInParent<ButtonInfoLab>();
 
+        //buttonInfoLabItem = GetComponentInParent<ButtonInfoLabItem>();
+
         heatertime = 60;//30
         curingtime = 90;//45
+
+       
+
+        //if (buttonInfoLab.item.name_item == "Empty")
+        //if (buttonInfoLab.item.type == ItemType.Default)
+        //{
+        //    //if (audiocontroller.cure)
+        //    //{
+        //    //audiocontroller.StopCureSound();
+        //        Debug.Log("this is an empty equipment so no sound");
+        //    //globalAudioController.StopSound(PlayableSounds.cure);
+        //    //}
+
+        //    //if (audiocontroller.heat)
+        //    //{
+        //    //audiocontroller.StopHeat();
+        //        Debug.Log("this is an empty equipment so no sound");
+        //        //globalAudioController.StopSound(PlayableSounds.heat);
+        //    //}
+
+        //    //Debug.Log("this is an empty equipment so no sound");
+
+        //}
+
 
         if (buttonInfoLab.item.type == ItemType.Equipment)
         {
@@ -181,6 +210,14 @@ public class ProgressBar : MonoBehaviour
                     //progressTick = 0;
                     //progressTickMax = 3;
                     break;
+                //case "Empty":
+                //    //if (buttonInfoLab.item.name_item == "Empty")
+                //    //{
+                //        audiocontroller.StopCureSound();
+                //        audiocontroller.StopHeat();
+                //        Debug.Log("this is an empty equipment so no sound");
+                //    //}
+                //    break;
             }
         }
 
@@ -204,6 +241,8 @@ public class ProgressBar : MonoBehaviour
     //Start TickSystem and progressbar
     private void TimeTickSystem_OnTick(object sender, TimeTickSystem.OnTickEventArgs e)
     {
+        
+
         if (isUpdating&&isOff)
         {
             //Check if random items that modify processtimes are bought
@@ -213,6 +252,7 @@ public class ProgressBar : MonoBehaviour
 
             progressTick += 1;
 
+
             if (progressTick > progressTickMax)
             {
                 Debug.Log("enter final progress step");
@@ -221,14 +261,14 @@ public class ProgressBar : MonoBehaviour
                 isOff = false;
 
 
-                //audiocontroller.PlayProduce();
+                audiocontroller.PlayProduce();
 
                 //fXController_Lab.PlayOn();
                 fXController_Lab.PlayAppear();
 
                 if (buttonInfoLab.item.name_item== "Curing Form")
                 {
-                    audiocontroller.PlayProduce();
+                    //audiocontroller.PlayProduce();
                     audiocontroller.StopCureSound();
                     Debug.Log("the sound of curing form is off");
 
@@ -236,7 +276,8 @@ public class ProgressBar : MonoBehaviour
 
                 if (buttonInfoLab.item.name_item == "Heating Pot 200W" || buttonInfoLab.item.name_item == "Heating Pot 400W" || buttonInfoLab.item.name_item == "Heating Pot 600W")
                 {
-                    audiocontroller.PlayProduceTrace();
+                    //audiocontroller.PlayProduceTrace();
+                    //audiocontroller.PlayProduce();
                     audiocontroller.StopHeat();
                     Debug.Log("the sound of heat is off");
                 }
@@ -260,8 +301,32 @@ public class ProgressBar : MonoBehaviour
                 Debug.Log("Process is still running");
                 this.SetProgress(progressTick * (100 / progressTickMax));
 
+
+
                 //Set the progress bar to current normalized value 
                 //this.SetProgress(progressTick);
+
+                if (buttonInfoLab.item.name_item == "Curing Form")
+                {
+
+                    //audiocontroller.cure = true;
+                    if (!globalAudioController.cure.isPlaying)
+                    {
+                        globalAudioController.PlaySound(PlayableSounds.cure);
+                    }
+                    
+                }
+
+                if (buttonInfoLab.item.name_item == "Heating Pot 200W" || buttonInfoLab.item.name_item == "Heating Pot 400W" || buttonInfoLab.item.name_item == "Heating Pot 600W")
+                {
+                    //audiocontroller.heat = true;
+                    if (!globalAudioController.heat.isPlaying)
+                    {
+                        globalAudioController.PlaySound(PlayableSounds.heat);
+                    }
+                       
+                }
+
 
             }
         }

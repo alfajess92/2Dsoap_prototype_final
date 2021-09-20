@@ -243,7 +243,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1042b0044a74e4fd7afe1d5338556609, type: 3}
-    m_FontSize: 20
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -560,8 +560,8 @@ MonoBehaviour:
   Heat: 6
   Pour: 7
   Drop: 8
-  Produce: 9
-  ProduceTrace: 0
+  Produce: 10
+  ProduceTrace: 11
   Cure: 9
   Click: 0
 --- !u!114 &7750159207390572710
@@ -925,8 +925,8 @@ MonoBehaviour:
   Heat: 6
   Pour: 7
   Drop: 8
-  Produce: 6
-  ProduceTrace: 0
+  Produce: 10
+  ProduceTrace: 11
   Cure: 9
   Click: 0
 --- !u!1 &7660620509653791978
@@ -1667,7 +1667,7 @@ PrefabInstance:
     - target: {fileID: 1165801504995250510, guid: 1b83126a929724fc3be74b660a9762cd,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayProduce
+      value: PlayCureSound
       objectReference: {fileID: 0}
     - target: {fileID: 1165801504995250510, guid: 1b83126a929724fc3be74b660a9762cd,
         type: 3}
@@ -1678,6 +1678,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7547841798435471773, guid: 1b83126a929724fc3be74b660a9762cd,
+        type: 3}
+      propertyPath: Click
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7547841798435471773, guid: 1b83126a929724fc3be74b660a9762cd,
+        type: 3}
+      propertyPath: ProduceTrace
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b83126a929724fc3be74b660a9762cd, type: 3}

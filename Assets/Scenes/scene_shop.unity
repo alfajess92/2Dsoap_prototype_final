@@ -1657,7 +1657,7 @@ MonoBehaviour:
   - 
   - 
   itemsTypeLab: []
-  coins: 250
+  coins: 2500
   CoinsTXT: {fileID: 266529417}
   HeatingPot200: {fileID: 11400000, guid: e98f067d0aca24e6aaaa1d02624bdca7, type: 2}
   HeatingPot400: {fileID: 11400000, guid: 5e215ea09479d4ef6854b88a8f52f7ba, type: 2}

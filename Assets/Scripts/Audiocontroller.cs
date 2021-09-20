@@ -24,6 +24,7 @@ public class Audiocontroller : MonoBehaviour
 
     private GlobalAudioController globalAudioController;
 
+    public bool heat, cure;
 
     //private void Awake()
     //{
@@ -96,6 +97,7 @@ public class Audiocontroller : MonoBehaviour
 
     public void PlayHeat()
     {
+        heat = true;
         globalAudioController.PlaySound(Heat);
         print("heating sound running");
 
@@ -105,7 +107,7 @@ public class Audiocontroller : MonoBehaviour
     public void StopHeat()
     {
         globalAudioController.StopSound(Heat);
-
+        heat = false;
     }
 
     public void PlayPour()
@@ -165,12 +167,13 @@ public class Audiocontroller : MonoBehaviour
     {
         globalAudioController.PlaySound(Cure);
         print("curing sound running");
-
+        cure = true;
     }
 
     public void StopCureSound()
     {
         globalAudioController.StopSound(Cure);
+        cure = false;
     }
 
 

@@ -6929,17 +6929,27 @@ PrefabInstance:
     - target: {fileID: 1667090621461421887, guid: 5709636ec66514c5db42ce5bec66b60c,
         type: 3}
       propertyPath: Cure
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667090621461421887, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
+      propertyPath: Click
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1667090621461421887, guid: 5709636ec66514c5db42ce5bec66b60c,
         type: 3}
       propertyPath: Produce
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1667090621461421887, guid: 5709636ec66514c5db42ce5bec66b60c,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667090621461421887, guid: 5709636ec66514c5db42ce5bec66b60c,
+        type: 3}
+      propertyPath: ProduceTrace
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4836661306477435836, guid: 5709636ec66514c5db42ce5bec66b60c,
         type: 3}
@@ -7059,7 +7069,7 @@ PrefabInstance:
     - target: {fileID: 6156376059961631360, guid: 5709636ec66514c5db42ce5bec66b60c,
         type: 3}
       propertyPath: Produce
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6156376059961631360, guid: 5709636ec66514c5db42ce5bec66b60c,
         type: 3}

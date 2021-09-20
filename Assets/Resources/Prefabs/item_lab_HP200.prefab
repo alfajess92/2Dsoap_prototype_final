@@ -122,8 +122,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16.975, y: -79.15}
-  m_SizeDelta: {x: 151.64, y: 26.17}
+  m_AnchoredPosition: {x: 17.4, y: -79.4}
+  m_SizeDelta: {x: 162.7617, y: 25.6644}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &488884625789364968
 CanvasRenderer:
@@ -155,7 +155,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1042b0044a74e4fd7afe1d5338556609, type: 3}
-    m_FontSize: 20
+    m_FontSize: 23
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -163,7 +163,7 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Heating pot 200W
@@ -351,7 +351,7 @@ MonoBehaviour:
   Heat: 6
   Pour: 7
   Drop: 8
-  Produce: 11
+  Produce: 10
   ProduceTrace: 11
   Cure: 9
   Click: 0
