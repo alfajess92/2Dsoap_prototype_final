@@ -93,9 +93,9 @@ public class ProgressBar : MonoBehaviour
     public void Start()
     {
         //audio
-        //audiocontroller = GetComponentInParent<Audiocontroller>();
-        //audiocontroller = GameObject.Find("audio").GetComponent<Audiocontroller>();
-        //globalAudioController = GameObject.Find("Sounds").GetComponent<GlobalAudioController>();
+        audiocontroller = GetComponentInParent<Audiocontroller>();
+        audiocontroller = GameObject.Find("audio").GetComponent<Audiocontroller>();
+        globalAudioController = GameObject.Find("Sounds").GetComponent<GlobalAudioController>();
         //globalAudioController.Init
 
 
@@ -265,16 +265,16 @@ public class ProgressBar : MonoBehaviour
                 isOff = false;
 
 
-                //audiocontroller.PlayProduce();
+                audiocontroller.PlayProduce();
 
                 //fXController_Lab.PlayOn();
                 fXController_Lab.PlayAppear();
 
                 if (buttonInfoLab.item.name_item== "Curing Form")
                 {
-                    
+
                     //**
-                    //audiocontroller.StopCureSound();
+                    audiocontroller.StopCureSound();
                     Debug.Log("the sound of curing form is off");
 
                 }
@@ -283,7 +283,7 @@ public class ProgressBar : MonoBehaviour
                 {
 
                     //**
-                    //audiocontroller.StopHeat();
+                    audiocontroller.StopHeat();
                     Debug.Log("the sound of heat is off");
                 }
 
@@ -313,27 +313,27 @@ public class ProgressBar : MonoBehaviour
 
 
                 //*****
-                //if (buttonInfoLab.item.name_item == "Curing Form")
-                //{
+                if (buttonInfoLab.item.name_item == "Curing Form")
+                {
 
-                //    //audiocontroller.cure = true;
-                //    if (!globalAudioController.cure.isPlaying)
-                //    {
-                //        globalAudioController.PlaySound(PlayableSounds.cure);
-                //    }
+                    //audiocontroller.cure = true;
+                    if (!globalAudioController.cure.isPlaying)
+                    {
+                        globalAudioController.PlaySound(PlayableSounds.cure);
+                    }
 
-                //}
+                }
 
-                //if (buttonInfoLab.item.name_item == "Heating Pot 200W" || buttonInfoLab.item.name_item == "Heating Pot 400W" || buttonInfoLab.item.name_item == "Heating Pot 600W")
-                //{
-                //    //audiocontroller.heat = true;
-                //    if (!globalAudioController.heat.isPlaying)
-                //    {
-                //        globalAudioController.PlaySound(PlayableSounds.heat);
-                //    }
+                if (buttonInfoLab.item.name_item == "Heating Pot 200W" || buttonInfoLab.item.name_item == "Heating Pot 400W" || buttonInfoLab.item.name_item == "Heating Pot 600W")
+                {
+                    //audiocontroller.heat = true;
+                    if (!globalAudioController.heat.isPlaying)
+                    {
+                        globalAudioController.PlaySound(PlayableSounds.heat);
+                    }
 
-                //}
-                //*****
+                }
+               // *****
 
             }
         }

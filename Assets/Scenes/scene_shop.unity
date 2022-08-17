@@ -1640,24 +1640,24 @@ MonoBehaviour:
   - {fileID: 0}
   itemsTypeShop:
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Empty
+  - Empty
+  - Empty
+  - Empty
+  - Empty
+  - Empty
+  - Empty
+  - Empty
+  - Empty
+  - Empty
+  - Empty
+  - Empty
+  - Empty
+  - Empty
+  - Empty
+  - Empty
+  - Empty
+  - Empty
   itemsTypeLab: []
   coins: 250
   CoinsTXT: {fileID: 266529417}
