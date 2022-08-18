@@ -381,7 +381,7 @@ public class ProgressBar : MonoBehaviour
 
     public void CheckSStar()
     {
-        if (labManagerScript.LabDictionary["ShootingStar"] >= 1)
+        if (labManagerScript.LabDictionary["Diadem"] >= 1)
         {
             if (buttonInfoLab.item.name_item == "Curing Form")
             {

@@ -58,7 +58,7 @@ public class LabManagerScript : MonoBehaviour
     public Intermediate trace;
     public Product soap;
     public Default empty;
-    public RandomItem  crayon, coin, clock, match, pond, star, sstar, bubblebottle;
+    public RandomItem  crayon, egg, clock, match, dog, trophy, diadem, bubblebottle;
  
 
     //Counters
@@ -67,7 +67,7 @@ public class LabManagerScript : MonoBehaviour
     private int totalSoap, totalTrace;
     private int totalEmpty;
 
-    private int totalMatch, totalCrayon, totalCoin, totalClock, totalPond, totalStar, totalSStar, totalBubbleBottle;
+    private int totalMatch, totalCrayon, totalEgg, totalClock, totalDog, totalTrophy, totalDiadem, totalBubbleBottle;
 
     //LabDictionary: save values and types 
     public Dictionary<string, int> LabDictionary = new Dictionary<string, int>();
@@ -75,7 +75,7 @@ public class LabManagerScript : MonoBehaviour
     //prefabs for instantiating objects
     public GameObject prefabcolorant, prefabfragrance, prefaboil, prefablye, prefabsoap, prefabtrace, prefabempty;//substances
     public GameObject prefabheater200, prefabheater400, prefabheater600, prefabcuring;//equipment
-    public GameObject prefabmatch, prefabcrayon, prefabcoin, prefabclock, prefabpond, prefabsstar, prefabstar, prefabbubblebottle;//Random
+    public GameObject prefabmatch, prefabcrayon, prefabegg, prefabclock, prefabdog, prefabdiadem, prefabtrophy, prefabbubblebottle;//Random
 
     public GameObject[] labHoldersList = new GameObject[19];
     //public Transform[] transformItems = new Transform[19];
@@ -332,8 +332,8 @@ public class LabManagerScript : MonoBehaviour
                 case "Clock":
                     InstantiateItems(prefabclock, labHoldersList[i].transform, i);
                     break;
-                case "Coin":
-                    InstantiateItems(prefabcoin, labHoldersList[i].transform, i);
+                case "Egg":
+                    InstantiateItems(prefabegg, labHoldersList[i].transform, i);
                     break;
                 case "Crayon":
                     InstantiateItems(prefabcrayon, labHoldersList[i].transform, i);
@@ -341,14 +341,14 @@ public class LabManagerScript : MonoBehaviour
                 case "Match":
                     InstantiateItems(prefabmatch, labHoldersList[i].transform, i);
                     break;
-                case "Pond":
-                    InstantiateItems(prefabpond, labHoldersList[i].transform, i);
+                case "Dog":
+                    InstantiateItems(prefabdog, labHoldersList[i].transform, i);
                     break;
-                case "ShootingStar":
-                    InstantiateItems(prefabsstar, labHoldersList[i].transform, i);
+                case "Diadem":
+                    InstantiateItems(prefabdiadem, labHoldersList[i].transform, i);
                     break;
-                case "Star":
-                    InstantiateItems(prefabstar, labHoldersList[i].transform, i);
+                case "Trophy":
+                    InstantiateItems(prefabtrophy, labHoldersList[i].transform, i);
                     break;
             }
 
@@ -469,8 +469,8 @@ public class LabManagerScript : MonoBehaviour
                     numberBatches[i] = 1;
                     break;
 
-                case "Coin":
-                    itemsInfoLab[i].item = coin;
+                case "Egg":
+                    itemsInfoLab[i].item = egg;
                     numberBatches[i] = 1;
                     break;
 
@@ -483,16 +483,16 @@ public class LabManagerScript : MonoBehaviour
                     //numberBatches[i] = matches;
                     numberBatches[i] = 1;
                     break;
-                case "Pond":
-                    itemsInfoLab[i].item = pond;
+                case "Dog":
+                    itemsInfoLab[i].item = dog;
                     numberBatches[i] = 1;
                     break;
-                case "ShootingStar":
-                    itemsInfoLab[i].item = sstar;
+                case "Diadem":
+                    itemsInfoLab[i].item = diadem;
                     numberBatches[i] = 1;
                     break;
-                case "Star":
-                    itemsInfoLab[i].item = star;
+                case "Trophy":
+                    itemsInfoLab[i].item = trophy;
                     numberBatches[i] = 1;
                     break;
             }
@@ -750,12 +750,12 @@ public class LabManagerScript : MonoBehaviour
         //CountRandom
         totalBubbleBottle = itemsTypeLab.Count(s => s == "BubbleBottle");
         totalClock = itemsTypeLab.Count(s => s == "Clock");
-        totalCoin = itemsTypeLab.Count(s => s == "Coin");
+        totalEgg = itemsTypeLab.Count(s => s == "Egg");
         totalCrayon = itemsTypeLab.Count(s => s == "Crayon");
         totalMatch = itemsTypeLab.Count(s => s == "Match");
-        totalPond = itemsTypeLab.Count(s => s == "Pond");
-        totalSStar = itemsTypeLab.Count(s => s == "ShootingStar");
-        totalStar = itemsTypeLab.Count(s => s == "Star");
+        totalDog = itemsTypeLab.Count(s => s == "Dog");
+        totalDiadem = itemsTypeLab.Count(s => s == "Diadem");
+        totalTrophy = itemsTypeLab.Count(s => s == "Trophy");
 
 
         UpdateLabDictionary();
@@ -785,13 +785,13 @@ public class LabManagerScript : MonoBehaviour
         //Random
         LabDictionary["BubbleBottle"] = totalBubbleBottle;
         LabDictionary["Clock"] = totalClock;
-        LabDictionary["Coin"] = totalCoin;
+        LabDictionary["Egg"] = totalEgg;
         LabDictionary["Crayon"] = totalCrayon;
         LabDictionary["Match"] = totalMatch;
         //Debug.Log("total of matches" + totalMatch);
-        LabDictionary["Pond"] = totalPond;
-        LabDictionary["ShootingStar"] = totalSStar;
-        LabDictionary["Star"] = totalStar;
+        LabDictionary["Dog"] = totalDog;
+        LabDictionary["Diadem"] = totalDiadem;
+        LabDictionary["Trophy"] = totalTrophy;
 
     }//called from CountTotalItemsLab
 

@@ -1659,7 +1659,7 @@ MonoBehaviour:
   - Empty
   - Empty
   itemsTypeLab: []
-  coins: 250
+  coins: 1000
   CoinsTXT: {fileID: 266529417}
   HeatingPot200: {fileID: 11400000, guid: e98f067d0aca24e6aaaa1d02624bdca7, type: 2}
   HeatingPot400: {fileID: 11400000, guid: 5e215ea09479d4ef6854b88a8f52f7ba, type: 2}
@@ -1674,11 +1674,11 @@ MonoBehaviour:
   empty: {fileID: 11400000, guid: 755750a6d66a641f59b09dca4ff387e2, type: 2}
   match: {fileID: 11400000, guid: 7faa1c2a2157c468f9b71a90d46ffbce, type: 2}
   crayon: {fileID: 11400000, guid: acc507c98c7a04e1e9194e48a740f87f, type: 2}
-  coin: {fileID: 11400000, guid: b99f70da78c6244db812e19f3d42c29c, type: 2}
+  egg: {fileID: 11400000, guid: b99f70da78c6244db812e19f3d42c29c, type: 2}
   clock: {fileID: 11400000, guid: 9b8c981c522944c4d89b9cb3b702c18a, type: 2}
-  pond: {fileID: 11400000, guid: 97422803c4aee4b01bb4edc076ca557f, type: 2}
-  star: {fileID: 11400000, guid: 9a84de220e2f444ad9cb6fd8e9601c31, type: 2}
-  sstar: {fileID: 11400000, guid: 867af080313fd4af98a90f2267c4dc8d, type: 2}
+  dog: {fileID: 11400000, guid: 97422803c4aee4b01bb4edc076ca557f, type: 2}
+  trophy: {fileID: 11400000, guid: 9a84de220e2f444ad9cb6fd8e9601c31, type: 2}
+  diadem: {fileID: 11400000, guid: 867af080313fd4af98a90f2267c4dc8d, type: 2}
   bubblebottle: {fileID: 11400000, guid: e0de16abc722d426a8c2b07af0874393, type: 2}
   totalSoap: 0
   totalTrace: 0
@@ -5591,11 +5591,11 @@ MonoBehaviour:
   empty: {fileID: 11400000, guid: 755750a6d66a641f59b09dca4ff387e2, type: 2}
   match: {fileID: 11400000, guid: 7faa1c2a2157c468f9b71a90d46ffbce, type: 2}
   crayon: {fileID: 11400000, guid: acc507c98c7a04e1e9194e48a740f87f, type: 2}
-  coin: {fileID: 11400000, guid: b99f70da78c6244db812e19f3d42c29c, type: 2}
+  egg: {fileID: 0}
   clock: {fileID: 11400000, guid: 9b8c981c522944c4d89b9cb3b702c18a, type: 2}
-  pond: {fileID: 11400000, guid: 97422803c4aee4b01bb4edc076ca557f, type: 2}
-  star: {fileID: 11400000, guid: 9a84de220e2f444ad9cb6fd8e9601c31, type: 2}
-  sstar: {fileID: 11400000, guid: 867af080313fd4af98a90f2267c4dc8d, type: 2}
+  dog: {fileID: 0}
+  trophy: {fileID: 0}
+  diadem: {fileID: 0}
   bubblebottle: {fileID: 11400000, guid: e0de16abc722d426a8c2b07af0874393, type: 2}
   totalSoap: 0
   totalTrace: 0
@@ -7213,11 +7213,11 @@ MonoBehaviour:
   empty: {fileID: 11400000, guid: 755750a6d66a641f59b09dca4ff387e2, type: 2}
   match: {fileID: 11400000, guid: 7faa1c2a2157c468f9b71a90d46ffbce, type: 2}
   crayon: {fileID: 11400000, guid: acc507c98c7a04e1e9194e48a740f87f, type: 2}
-  coin: {fileID: 11400000, guid: b99f70da78c6244db812e19f3d42c29c, type: 2}
+  egg: {fileID: 0}
   clock: {fileID: 11400000, guid: 9b8c981c522944c4d89b9cb3b702c18a, type: 2}
-  pond: {fileID: 11400000, guid: 97422803c4aee4b01bb4edc076ca557f, type: 2}
-  star: {fileID: 11400000, guid: 9a84de220e2f444ad9cb6fd8e9601c31, type: 2}
-  sstar: {fileID: 11400000, guid: 867af080313fd4af98a90f2267c4dc8d, type: 2}
+  dog: {fileID: 0}
+  trophy: {fileID: 0}
+  diadem: {fileID: 0}
   bubblebottle: {fileID: 11400000, guid: e0de16abc722d426a8c2b07af0874393, type: 2}
   totalSoap: 0
   totalTrace: 0

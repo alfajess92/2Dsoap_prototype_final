@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 112959016127782995}
   - component: {fileID: 565485448667306512}
   m_Layer: 5
-  m_Name: Item_pond
+  m_Name: Item_dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -630, y: 110}
+  m_AnchoredPosition: {x: -628.5, y: 106.5}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4983982863361023934
@@ -156,6 +156,8 @@ MonoBehaviour:
   ProduceTrace: 0
   Cure: 0
   Click: 0
+  heat: 0
+  cure: 0
 --- !u!114 &112959016127782995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,7 +251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 382ba2cc4c35046a688417d9ecb25f3f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 546a9e4f60f234d4cafd622c770d0bfb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -564,7 +566,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: pond
+  m_Text: Dog
 --- !u!1001 &3478173332524559482
 PrefabInstance:
   m_ObjectHideFlags: 0
