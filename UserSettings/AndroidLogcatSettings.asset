@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R58N91SXHWT",
         "name": "com.Soap2D.SoapChallenge",
-        "processId": 24316,
+        "processId": 14275,
         "exited": false
     },
     "m_SelectedPriority": 2,
@@ -66,6 +66,24 @@
             "deviceId": "R58N91SXHWT",
             "name": "com.Soap2D.SoapChallenge",
             "processId": 24316,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N91SXHWT",
+            "name": "com.Soap2D.SoapChallenge",
+            "processId": 24437,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N91SXHWT",
+            "name": "com.Soap2D.SoapChallenge",
+            "processId": 24597,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N91SXHWT",
+            "name": "com.Soap2D.SoapChallenge",
+            "processId": 14275,
             "exited": false
         }
     ],

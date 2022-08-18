@@ -71,7 +71,9 @@ public class DraggableComponent : MonoBehaviour, IInitializePotentialDragHandler
         if (FollowCursor)
         {
             //To modify the rectTransform position of the image the distance it has moved(delta)
-            rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+            //rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;//only works on rendermode "ScreenSpace"
+            rectTransform.anchoredPosition += eventData.delta;
+            //Debug.Log("ondrag position"+ rectTransform.anchoredPosition);
             Debug.Log("OnDrag");
         }
     }
@@ -113,6 +115,7 @@ public class DraggableComponent : MonoBehaviour, IInitializePotentialDragHandler
                 Debug.Log("the item is dropped");
 
                 //This will return the item in the same position
+                //Debug.Log("This is position draggable object" + rectTransform.anchoredPosition);
                 rectTransform.anchoredPosition = StartPosition;
                 canvasGroup.alpha = 1f;//reset transparency when drag is finished
                 canvasGroup.blocksRaycasts = true;
