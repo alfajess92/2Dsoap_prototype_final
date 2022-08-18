@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R58N91SXHWT",
         "name": "com.Soap2D.SoapChallenge",
-        "processId": 14275,
+        "processId": 14417,
         "exited": false
     },
     "m_SelectedPriority": 2,
@@ -84,6 +84,12 @@
             "deviceId": "R58N91SXHWT",
             "name": "com.Soap2D.SoapChallenge",
             "processId": 14275,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N91SXHWT",
+            "name": "com.Soap2D.SoapChallenge",
+            "processId": 14417,
             "exited": false
         }
     ],

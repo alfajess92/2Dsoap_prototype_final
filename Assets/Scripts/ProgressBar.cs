@@ -303,7 +303,7 @@ public class ProgressBar : MonoBehaviour
             else
             {
                 //Process is still running
-                Debug.Log("Process is still running");
+                //Debug.Log("Process is still running");
                 this.SetProgress(progressTick * (100 / progressTickMax));
 
 
