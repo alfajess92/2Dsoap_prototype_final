@@ -159,6 +159,7 @@ public class EquipmentSlot : MonoBehaviour
 
     {
         onOffButton.GetComponent<Button>().interactable = true;
+        onOffButton.isOnPressed =true;// TODO make automatic the process
         //onOffButton.SetTextOFF();
         //onOffButton.isOnPressed = true;
     }

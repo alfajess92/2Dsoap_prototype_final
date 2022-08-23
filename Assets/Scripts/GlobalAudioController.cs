@@ -73,33 +73,14 @@ public class GlobalAudioController : MonoBehaviour
         
     }
 
-    public void ChangeMute()
-    {
-        //GameObject globalAudioController = GameObject.Find("Sounds");
-        
-
-    }
+   
 
     public void ChangeValueMute()
     {
-        //GameObject globalAudioController = GameObject.Find("Sounds");
-
-        //mute=globalAudioController.GetComponent<GlobalAudioController>().GetMute();
-
 
         mute = !mute;
         Debug.Log("This is the value of mute" + mute);
 
-        //if (mute == false)
-        //{
-        //    //show image of sound
-
-        //}
-
-        //else
-        //{
-        //    //show image NO sound
-        //}
     }
 
     public void PlaySound(PlayableSounds sound)
