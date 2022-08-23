@@ -40,7 +40,19 @@ public class GlobalAudioController : MonoBehaviour
     //Source: https://www.youtube.com/watch?v=82Mn8v55nr0
     public static GlobalAudioController Instance { get; private set; } = null;
 
+    public static bool  mute = false;
 
+    public bool GetMute()
+    {
+
+        //GlobalAudioController controller = FindObjectOfType<GlobalAudioController>();
+        //Debug.Log("find the controller" + controller.gameObject.name);
+        //mute = controller.GetMute();
+        Debug.Log("Getting mute" + mute);
+        return mute;
+    }
+
+   
     private void Awake()
     {
 
@@ -54,70 +66,106 @@ public class GlobalAudioController : MonoBehaviour
         else
         {
             Instance = this;
+            GetMute();
         }
 
         DontDestroyOnLoad(gameObject);
         
     }
 
-   
+    public void ChangeMute()
+    {
+        //GameObject globalAudioController = GameObject.Find("Sounds");
+        
+
+    }
+
+    public void ChangeValueMute()
+    {
+        //GameObject globalAudioController = GameObject.Find("Sounds");
+
+        //mute=globalAudioController.GetComponent<GlobalAudioController>().GetMute();
+
+
+        mute = !mute;
+        Debug.Log("This is the value of mute" + mute);
+
+        //if (mute == false)
+        //{
+        //    //show image of sound
+
+        //}
+
+        //else
+        //{
+        //    //show image NO sound
+        //}
+    }
 
     public void PlaySound(PlayableSounds sound)
     {
-        switch (sound)
+        if (GlobalAudioController.mute == false)
         {
-            case PlayableSounds.switchlab:
-                //TODO check if switch lab and shop sound are the same to remove one of them
-                switchLab.Play();
-                
-                //if (!switchLab.isPlaying)
-                //{
-                //    switchLab.Play();
-                //    print("This is the time of switchlab" + switchLab.time);
-                //}
-                //else
-                //{
-                //    switchLab.Stop();
-                //}
+            switch (sound)
+            {
+                case PlayableSounds.switchlab:
+                    //TODO check if switch lab and shop sound are the same to remove one of them
+                    switchLab.Play();
 
-                break;
-            case PlayableSounds.switchshop:
-                switchShop.Play();
-                break;
-            case PlayableSounds.moveItem:
-                moveItem.Play();
-                break;
-            case PlayableSounds.buy:
-                buy.Play();
-                break;
-            case PlayableSounds.sell:
-                sell.Play();
-                break;
-            case PlayableSounds.heat:
-                heat.Play();
-                break;
-            case PlayableSounds.pour:
-                pour.Play();
-                break;
-            case PlayableSounds.drop:
-                drop.Play();
-                break;
-            case PlayableSounds.produce:
-                produce.Play();
-                break;
+                    //if (!switchLab.isPlaying)
+                    //{
+                    //    switchLab.Play();
+                    //    print("This is the time of switchlab" + switchLab.time);
+                    //}
+                    //else
+                    //{
+                    //    switchLab.Stop();
+                    //}
 
-            case PlayableSounds.produceTrace:
-                produceTrace.Play();
-                break;
-            case PlayableSounds.cure:
-                cure.Play();
-                break;
+                    break;
+                case PlayableSounds.switchshop:
+                    switchShop.Play();
+                    break;
+                case PlayableSounds.moveItem:
+                    moveItem.Play();
+                    break;
+                case PlayableSounds.buy:
+                    buy.Play();
+                    break;
+                case PlayableSounds.sell:
+                    sell.Play();
+                    break;
+                case PlayableSounds.heat:
+                    heat.Play();
+                    break;
+                case PlayableSounds.pour:
+                    pour.Play();
+                    break;
+                case PlayableSounds.drop:
+                    drop.Play();
+                    break;
+                case PlayableSounds.produce:
+                    produce.Play();
+                    break;
 
-            case PlayableSounds.click:
-                click.Play();
-                break;
-            case PlayableSounds.none:
-                break;
+                case PlayableSounds.produceTrace:
+                    produceTrace.Play();
+                    break;
+                case PlayableSounds.cure:
+                    cure.Play();
+                    break;
+
+                case PlayableSounds.click:
+                    click.Play();
+                    break;
+                case PlayableSounds.none:
+                    break;
+            }
+        }
+
+        else
+        {
+            Debug.Log("The Game is muted");
         }
     }
 

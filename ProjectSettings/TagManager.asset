@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Event
   - Holder
+  - FxTemporaire
+  - Sounds
   layers:
   - Default
   - TransparentFX
