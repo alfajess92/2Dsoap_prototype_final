@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "RFCR20XHCDL",
     "m_SelectedPackage": {
-        "deviceId": "R58N91SXHWT",
+        "deviceId": "RFCR20XHCDL",
         "name": "com.Soap2D.SoapChallenge",
-        "processId": 14417,
+        "processId": 14249,
         "exited": false
     },
     "m_SelectedPriority": 2,
@@ -48,6 +48,12 @@
             "deviceId": "RFCR20XHCDL",
             "name": "com.Soap2D.SoapChallenge",
             "processId": 25983,
+            "exited": false
+        },
+        {
+            "deviceId": "RFCR20XHCDL",
+            "name": "com.Soap2D.SoapChallenge",
+            "processId": 14249,
             "exited": false
         },
         {

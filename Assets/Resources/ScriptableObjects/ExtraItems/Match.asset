@@ -18,7 +18,7 @@ MonoBehaviour:
   prefab: {fileID: 0}
   power: 0
   sellprice: 1
-  buyprice: 700
+  buyprice: 1200
   quantity_lab: 1
   quantity_unit: 
   artwork: {fileID: 21300000, guid: 3b026cf96cbd2422999d73d391eb4c0b, type: 3}
