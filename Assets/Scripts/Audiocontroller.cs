@@ -32,6 +32,14 @@ public class Audiocontroller : MonoBehaviour
 
     //}
 
+    private void Awake()
+    {
+        //globalAudioController = GameObject.Find("Sounds").GetComponent<GlobalAudioController>();
+        //Debug.Log("awake global audio");
+
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {

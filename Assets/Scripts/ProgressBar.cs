@@ -73,6 +73,9 @@ public class ProgressBar : MonoBehaviour
         //Find LabManager in the scene and define it once
         labManager = GameObject.Find("LabManager");
         labManagerScript = labManager.GetComponent<LabManagerScript>();
+        //audiocontroller = GameObject.Find("audio").GetComponent<Audiocontroller>();
+        //globalAudioController = GameObject.Find("Sounds").GetComponent<GlobalAudioController>();
+        //Debug.Log("awake audio");
 
     }
 
@@ -90,9 +93,10 @@ public class ProgressBar : MonoBehaviour
     public void Start()
     {
         //audio
-        //audiocontroller = GetComponentInParent<Audiocontroller>();
+        audiocontroller = GetComponentInParent<Audiocontroller>();
         audiocontroller = GameObject.Find("audio").GetComponent<Audiocontroller>();
         globalAudioController = GameObject.Find("Sounds").GetComponent<GlobalAudioController>();
+        //globalAudioController.Init
 
 
         fXController_Lab = GetComponentInParent<FXController_Lab>();
@@ -268,7 +272,8 @@ public class ProgressBar : MonoBehaviour
 
                 if (buttonInfoLab.item.name_item== "Curing Form")
                 {
-                    //audiocontroller.PlayProduce();
+
+                    //**
                     audiocontroller.StopCureSound();
                     Debug.Log("the sound of curing form is off");
 
@@ -276,8 +281,8 @@ public class ProgressBar : MonoBehaviour
 
                 if (buttonInfoLab.item.name_item == "Heating Pot 200W" || buttonInfoLab.item.name_item == "Heating Pot 400W" || buttonInfoLab.item.name_item == "Heating Pot 600W")
                 {
-                    //audiocontroller.PlayProduceTrace();
-                    //audiocontroller.PlayProduce();
+
+                    //**
                     audiocontroller.StopHeat();
                     Debug.Log("the sound of heat is off");
                 }
@@ -298,7 +303,7 @@ public class ProgressBar : MonoBehaviour
             else
             {
                 //Process is still running
-                Debug.Log("Process is still running");
+                //Debug.Log("Process is still running");
                 this.SetProgress(progressTick * (100 / progressTickMax));
 
 
@@ -306,6 +311,8 @@ public class ProgressBar : MonoBehaviour
                 //Set the progress bar to current normalized value 
                 //this.SetProgress(progressTick);
 
+
+                //*****
                 if (buttonInfoLab.item.name_item == "Curing Form")
                 {
 
@@ -314,7 +321,7 @@ public class ProgressBar : MonoBehaviour
                     {
                         globalAudioController.PlaySound(PlayableSounds.cure);
                     }
-                    
+
                 }
 
                 if (buttonInfoLab.item.name_item == "Heating Pot 200W" || buttonInfoLab.item.name_item == "Heating Pot 400W" || buttonInfoLab.item.name_item == "Heating Pot 600W")
@@ -324,9 +331,9 @@ public class ProgressBar : MonoBehaviour
                     {
                         globalAudioController.PlaySound(PlayableSounds.heat);
                     }
-                       
-                }
 
+                }
+               // *****
 
             }
         }
@@ -374,7 +381,7 @@ public class ProgressBar : MonoBehaviour
 
     public void CheckSStar()
     {
-        if (labManagerScript.LabDictionary["ShootingStar"] >= 1)
+        if (labManagerScript.LabDictionary["Diadem"] >= 1)
         {
             if (buttonInfoLab.item.name_item == "Curing Form")
             {

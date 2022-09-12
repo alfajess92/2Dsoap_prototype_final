@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "RFCR20XHCDL",
         "name": "com.Soap2D.SoapChallenge",
-        "processId": 25983,
+        "processId": 14249,
         "exited": false
     },
     "m_SelectedPriority": 2,
@@ -48,6 +48,54 @@
             "deviceId": "RFCR20XHCDL",
             "name": "com.Soap2D.SoapChallenge",
             "processId": 25983,
+            "exited": false
+        },
+        {
+            "deviceId": "RFCR20XHCDL",
+            "name": "com.Soap2D.SoapChallenge",
+            "processId": 14249,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N91SXHWT",
+            "name": "com.android.settings",
+            "processId": 11529,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N91SXHWT",
+            "name": "com.Soap2D.SoapChallenge",
+            "processId": 15633,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N91SXHWT",
+            "name": "com.Soap2D.SoapChallenge",
+            "processId": 24316,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N91SXHWT",
+            "name": "com.Soap2D.SoapChallenge",
+            "processId": 24437,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N91SXHWT",
+            "name": "com.Soap2D.SoapChallenge",
+            "processId": 24597,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N91SXHWT",
+            "name": "com.Soap2D.SoapChallenge",
+            "processId": 14275,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N91SXHWT",
+            "name": "com.Soap2D.SoapChallenge",
+            "processId": 14417,
             "exited": false
         }
     ],

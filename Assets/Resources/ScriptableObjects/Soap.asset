@@ -18,7 +18,7 @@ MonoBehaviour:
   prefab: {fileID: 4983982863361023939, guid: f05c4120a29fe1e4b8006b4ec8a56bb3, type: 3}
   power: 0
   sellprice: 120
-  buyprice: 120
+  buyprice: 200
   quantity_lab: 6
   quantity_unit: Kg
   artwork: {fileID: 21300000, guid: 07cf45203576a9c42a1011ac99192106, type: 3}

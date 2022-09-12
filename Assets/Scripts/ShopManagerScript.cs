@@ -63,7 +63,7 @@ public class ShopManagerScript : MonoBehaviour
     public Default empty;
 
     //TEST new items
-    public RandomItem match, crayon, coin, clock, pond, star, sstar, bubblebottle;
+    public RandomItem match, crayon, egg, clock, dog, trophy, diadem, bubblebottle;
        
     //Counters
     private int totalCuringForms, totalHeatingPot200, totalHeatingPot400, totalHeatingPot600;
@@ -71,7 +71,7 @@ public class ShopManagerScript : MonoBehaviour
     public int totalSoap, totalTrace;
     private int totalEmpty;
     //Random items
-    private int totalMatch, totalCrayon, totalCoin, totalClock, totalPond, totalStar, totalSStar, totalBubbleBottle;
+    private int totalMatch, totalCrayon, totalEgg, totalClock, totalDog, totalTrophy, totalDiadem, totalBubbleBottle;
 
 
     //ShopDictionary: save values and types 
@@ -85,7 +85,7 @@ public class ShopManagerScript : MonoBehaviour
             {"Trace", 0},{"Soap", 0},{"Empty", 0},
 
             //Random
-             {"BubbleBottle",0},{"Clock",0},{"Coin",0},{"Crayon",0},{ "Match",0},{"Pond",0},{"ShootingStar",0},{"Star",0}
+             {"BubbleBottle",0},{"Clock",0},{"Egg",0},{"Crayon",0},{ "Match",0},{"Dog",0},{"Diadem",0},{"Trophy",0}
         };
 
     //TODO check if necessary to declare in shop, it is only used in the lab
@@ -252,22 +252,6 @@ public class ShopManagerScript : MonoBehaviour
         }
 
 
-        //for (int i = 1; i < 19; i++)
-        //{
-        //    //when is called for the first time, start lab as in the shop
-        //    if (itemsTypeLab[i] == null)
-        //    {
-        //        itemsTypeLab[i] = "Empty";
-        //        isRead = true;
-        //        Debug.Log("reading types for lab for the first time");
-        //    }
-        //    else
-        //    {
-        //        //itemsTypeLab[i] = itemsTypeLab
-        //        //Debug.Log("reading types from last session");
-        //    }
-        //    //itemsTypeLab[i] = "Empty";// itemsTypeLab[i] = itemsTypeShop[i]; 
-        //}
 
     } //Read the types that come from lab
 
@@ -341,8 +325,8 @@ public class ShopManagerScript : MonoBehaviour
                 case "Clock":
                     shopItemsQuantity[i] = ShopDictionary["Clock"];
                     break;
-                case "Coin":
-                    shopItemsQuantity[i] = ShopDictionary["Coin"];
+                case "Egg":
+                    shopItemsQuantity[i] = ShopDictionary["Egg"];
                     CheckCoin(i);
                     break;
                 case "Crayon":
@@ -353,15 +337,15 @@ public class ShopManagerScript : MonoBehaviour
                 case "Match":
                     shopItemsQuantity[i] = ShopDictionary["Match"];
                     break;
-                case "Pond":
-                    shopItemsQuantity[i] = ShopDictionary["Pond"];
+                case "Dog":
+                    shopItemsQuantity[i] = ShopDictionary["Dog"];
                     CheckPond(i);
                     break;
-                case "ShootingStar":
-                    shopItemsQuantity[i] = ShopDictionary["ShootingStar"];
+                case "Diadem":
+                    shopItemsQuantity[i] = ShopDictionary["Diadem"];
                     break;
-                case "Star":
-                    shopItemsQuantity[i] = ShopDictionary["Star"];
+                case "Trophy":
+                    shopItemsQuantity[i] = ShopDictionary["Trophy"];
                     CheckStar(i);
                     break;
             }
@@ -402,7 +386,7 @@ public class ShopManagerScript : MonoBehaviour
                 }
 
                 //Sell prices of equipments increase when coin is bought
-                if (ButtonRef.GetComponentInParent<ButtonInfo>().item == coin)
+                if (ButtonRef.GetComponentInParent<ButtonInfo>().item == egg)
                 {
                     for (int i= 1; i< 19; i++)
                     {
@@ -412,7 +396,7 @@ public class ShopManagerScript : MonoBehaviour
                 }
 
                 //Sell prices of substances increase when pond is bought
-                if (ButtonRef.GetComponentInParent<ButtonInfo>().item == pond)
+                if (ButtonRef.GetComponentInParent<ButtonInfo>().item == dog)
                 {
                     for (int i = 1; i < 19; i++)
                     {
@@ -422,7 +406,7 @@ public class ShopManagerScript : MonoBehaviour
                 }
 
                 //Sell price of soap doubles when Star is bought
-                if (ButtonRef.GetComponentInParent<ButtonInfo>().item == star)
+                if (ButtonRef.GetComponentInParent<ButtonInfo>().item == trophy)
                 {
                     for (int i = 1; i < 19; i++)
                     {
@@ -526,7 +510,7 @@ public class ShopManagerScript : MonoBehaviour
                     }
 
                     //Reset Selling prices of equipments when coin is sold
-                    if (ButtonRef.GetComponentInParent<ButtonInfo>().item == coin)
+                    if (ButtonRef.GetComponentInParent<ButtonInfo>().item == egg)
                     {
                         for (int i = 1; i < 19; i++)
                         {
@@ -536,7 +520,7 @@ public class ShopManagerScript : MonoBehaviour
                     }
 
                     //Reset Selling prices of substances when pond is sold
-                    if (ButtonRef.GetComponentInParent<ButtonInfo>().item == pond)
+                    if (ButtonRef.GetComponentInParent<ButtonInfo>().item == dog)
                     {
                         for (int i = 1; i < 19; i++)
                         {
@@ -546,7 +530,7 @@ public class ShopManagerScript : MonoBehaviour
                     }
 
                     //Reset price of soap
-                    if (ButtonRef.GetComponentInParent<ButtonInfo>().item == star)
+                    if (ButtonRef.GetComponentInParent<ButtonInfo>().item == trophy)
                     {
                         for (int i = 1; i < 19; i++)
                         {
@@ -644,8 +628,8 @@ public class ShopManagerScript : MonoBehaviour
         int indexClock = Array.IndexOf(itemsTypeShop, "Clock");
         totalClock = shopItemsQuantity[indexClock];
 
-        int indexCoin = Array.IndexOf(itemsTypeShop, "Coin");
-        totalCoin = shopItemsQuantity[indexCoin];
+        int indexCoin = Array.IndexOf(itemsTypeShop, "Egg");
+        totalEgg = shopItemsQuantity[indexCoin];
 
         int indexCrayon = Array.IndexOf(itemsTypeShop, "Crayon");
         totalCrayon = shopItemsQuantity[indexCrayon];
@@ -653,14 +637,14 @@ public class ShopManagerScript : MonoBehaviour
         int indexMatch = Array.IndexOf(itemsTypeShop, "Match");
         totalMatch = shopItemsQuantity[indexMatch];
 
-        int indexPond = Array.IndexOf(itemsTypeShop, "Pond");
-        totalPond = shopItemsQuantity[indexPond];
+        int indexPond = Array.IndexOf(itemsTypeShop, "Dog");
+        totalDog = shopItemsQuantity[indexPond];
 
-        int indexShootingStar = Array.IndexOf(itemsTypeShop, "ShootingStar");
-        totalSStar = shopItemsQuantity[indexShootingStar];
+        int indexShootingStar = Array.IndexOf(itemsTypeShop, "Diadem");
+        totalDiadem = shopItemsQuantity[indexShootingStar];
 
-        int indexStar = Array.IndexOf(itemsTypeShop, "Star");
-        totalStar = shopItemsQuantity[indexStar];
+        int indexStar = Array.IndexOf(itemsTypeShop, "Trophy");
+        totalTrophy = shopItemsQuantity[indexStar];
 
         UpdateShopDictionary();//update the shop dictionary 
 
@@ -693,12 +677,12 @@ public class ShopManagerScript : MonoBehaviour
 
         ShopDictionary["BubbleBottle"] = totalBubbleBottle;
         ShopDictionary["Clock"] = totalClock;
-        ShopDictionary["Coin"] = totalCoin;
+        ShopDictionary["Egg"] = totalEgg;
         ShopDictionary["Crayon"] = totalCrayon;
         ShopDictionary["Match"] = totalMatch;
-        ShopDictionary["Pond"] = totalPond;
-        ShopDictionary["ShootingStar"] = totalSStar;
-        ShopDictionary["Star"] = totalStar;
+        ShopDictionary["Dog"] = totalDog;
+        ShopDictionary["Diadem"] = totalDiadem;
+        ShopDictionary["Trophy"] = totalTrophy;
 
     }
 
@@ -840,7 +824,7 @@ public class ShopManagerScript : MonoBehaviour
         //print("checking coin ");
         if (ButtonInfo.updateEquipment == false)
         {
-            if (ShopDictionary["Coin"] >= 1)
+            if (ShopDictionary["Egg"] >= 1)
             {
                 itemsInfoShop[i].UpdateEquipmentSellingPrices();
                 Debug.Log("Equipment prices updated");
@@ -855,7 +839,7 @@ public class ShopManagerScript : MonoBehaviour
         //print("checking pond");
         if (ButtonInfo.updateSubstance == false)
         {
-            if (ShopDictionary["Pond"] >= 1)
+            if (ShopDictionary["Dog"] >= 1)
             {
                 itemsInfoShop[i].UpdateSubstancesSellingPrice();
                 Debug.Log("Substances prices updated");
@@ -869,7 +853,7 @@ public class ShopManagerScript : MonoBehaviour
         //print("checking star ");
         if (ButtonInfo.updateSoap == false)
         {
-            if (ShopDictionary["Star"] >= 1)
+            if (ShopDictionary["Trophy"] >= 1)
             {
                 itemsInfoShop[i].UpdateSoapSellingPrice();
                 Debug.Log("Soap prices updated");
