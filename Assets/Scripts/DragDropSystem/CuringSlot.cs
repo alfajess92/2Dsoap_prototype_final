@@ -67,7 +67,7 @@ public class CuringSlot : EquipmentSlot
 
                         {
                             //Audio and FX
-                            audiocontroller.PlayDrop();
+                            //audiocontroller.PlayDrop();//TODO removed on 17/11/22 bug on sound in Android
                             fXController.PlayDrop();//animation
 
                             inventoryDictionary.inventory[DropArea.item.name_item]++;
@@ -81,7 +81,7 @@ public class CuringSlot : EquipmentSlot
 
                         else if (itemZ < limita && inventoryDictionary.inventory["Trace"] == inventoryDictionary.inventory[DropArea.item.name_item])
                         {
-                            audiocontroller.PlayDrop();
+                            //audiocontroller.PlayDrop();//TODO removed on 17/11/22 bug on sound in Android
                             fXController.PlayDrop();//animation
 
                             inventoryDictionary.inventory[DropArea.item.name_item]++;
@@ -94,7 +94,7 @@ public class CuringSlot : EquipmentSlot
                             //Remove TRACE once it is dropped from the dropArea
                             if (DropArea.item.name_item == "Trace")
                             {
-                                audiocontroller.PlayDrop();
+                                //audiocontroller.PlayDrop();//TODO removed on 17/11/22 bug on sound in Android
                                 fXController.PlayDrop();//animation
                                 labManagerScript.itemsInfoLab[DropArea.itemID].item = empty;//Set the item to empty to make it available once again
                                 labManagerScript.ReadLabTypes();//To update the type after using the trace

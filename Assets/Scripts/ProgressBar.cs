@@ -92,11 +92,10 @@ public class ProgressBar : MonoBehaviour
 
     public void Start()
     {
-        //audio
-        audiocontroller = GetComponentInParent<Audiocontroller>();
-        audiocontroller = GameObject.Find("audio").GetComponent<Audiocontroller>();
-        globalAudioController = GameObject.Find("Sounds").GetComponent<GlobalAudioController>();
-        //globalAudioController.Init
+        //audio: TODO removed on 17/11/22 bug on sound in Android
+        //audiocontroller = GetComponentInParent<Audiocontroller>();
+        //audiocontroller = GameObject.Find("audio").GetComponent<Audiocontroller>();
+        //globalAudioController = GameObject.Find("Sounds").GetComponent<GlobalAudioController>();
 
 
         fXController_Lab = GetComponentInParent<FXController_Lab>();
@@ -265,7 +264,7 @@ public class ProgressBar : MonoBehaviour
                 isOff = false;
 
 
-                audiocontroller.PlayProduce();
+                //audiocontroller.PlayProduce();//TODO removed on 17/11/22 bug on sound in Android
 
                 //fXController_Lab.PlayOn();
                 fXController_Lab.PlayAppear();
@@ -274,7 +273,7 @@ public class ProgressBar : MonoBehaviour
                 {
 
                     //**
-                    audiocontroller.StopCureSound();
+                    //audiocontroller.StopCureSound();//TODO removed on 17/11/22 bug on sound in Android
                     Debug.Log("the sound of curing form is off");
 
                 }
@@ -316,21 +315,21 @@ public class ProgressBar : MonoBehaviour
                 if (buttonInfoLab.item.name_item == "Curing Form")
                 {
 
-                    //audiocontroller.cure = true;
-                    if (!globalAudioController.cure.isPlaying)
-                    {
-                        globalAudioController.PlaySound(PlayableSounds.cure);
-                    }
+                    ////audiocontroller.cure = true;
+                    //if (!globalAudioController.cure.isPlaying)
+                    //{
+                    //    globalAudioController.PlaySound(PlayableSounds.cure);//TODO removed on 17/11/22 bug on sound in Android
+                    //}
 
                 }
 
                 if (buttonInfoLab.item.name_item == "Heating Pot 200W" || buttonInfoLab.item.name_item == "Heating Pot 400W" || buttonInfoLab.item.name_item == "Heating Pot 600W")
                 {
-                    //audiocontroller.heat = true;
-                    if (!globalAudioController.heat.isPlaying)
-                    {
-                        globalAudioController.PlaySound(PlayableSounds.heat);
-                    }
+                    ////audiocontroller.heat = true;
+                    //if (!globalAudioController.heat.isPlaying)
+                    //{
+                    //    globalAudioController.PlaySound(PlayableSounds.heat);//TODO removed on 17/11/22 bug on sound in Android
+                    //}
 
                 }
                // *****
