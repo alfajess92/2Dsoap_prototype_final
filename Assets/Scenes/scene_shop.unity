@@ -903,7 +903,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 74565687}
         m_TargetAssemblyTypeName: 
-        m_MethodName: PlayClickSound
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1659,7 +1659,7 @@ MonoBehaviour:
   - Empty
   - Empty
   itemsTypeLab: []
-  coins: 1000
+  coins: 250
   CoinsTXT: {fileID: 266529417}
   HeatingPot200: {fileID: 11400000, guid: e98f067d0aca24e6aaaa1d02624bdca7, type: 2}
   HeatingPot400: {fileID: 11400000, guid: 5e215ea09479d4ef6854b88a8f52f7ba, type: 2}
@@ -1688,7 +1688,7 @@ MonoBehaviour:
   chatManagerScript: {fileID: 1890138444}
   chatTriggerScript: {fileID: 970364032}
   colorChanger: {fileID: 553320970}
-  globalAudioController: {fileID: 0}
+  globalAudioController: {fileID: 1416160709}
 --- !u!4 &200312530
 Transform:
   m_ObjectHideFlags: 0
@@ -4667,7 +4667,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1226167501}
         m_TargetAssemblyTypeName: 
-        m_MethodName: PlaySwitchLab
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5786,6 +5786,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409480396}
   m_CullTransparentMesh: 0
+--- !u!114 &1416160709 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 584960158750672891, guid: 8231a252b2b5b4cc58f1828f8241aac9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1684774364}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423c18144c4954ac6b5bfb1b0e0ce1cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1420475899 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4205326287658099258, guid: 5a11ed1b4a1c2ae43829efa962022939,
@@ -7211,7 +7223,7 @@ MonoBehaviour:
   - 
   - 
   - 
-  coins: 0
+  coins: 250
   CoinsTXT: {fileID: 266529417}
   HeatingPot200: {fileID: 11400000, guid: e98f067d0aca24e6aaaa1d02624bdca7, type: 2}
   HeatingPot400: {fileID: 11400000, guid: 5e215ea09479d4ef6854b88a8f52f7ba, type: 2}
@@ -7588,7 +7600,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1837610461}
   m_OnClick:
     m_PersistentCalls:
@@ -7833,21 +7845,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: TriggerEvent
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1837610464}
         m_TargetAssemblyTypeName: 
-        m_MethodName: PlayClickSound
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

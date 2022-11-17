@@ -808,7 +808,7 @@ public class LabManagerScript : MonoBehaviour
     public List<Containers> RecordItemsInventory()
     {
         //To find again the inventoryDictionaries, TODO check if necessary
-        //FindItemsInventory();
+        FindItemsInventory();
 
         //call the list
         inventories = new List<Containers>();

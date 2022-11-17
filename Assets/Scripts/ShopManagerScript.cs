@@ -49,10 +49,11 @@ public class ShopManagerScript : MonoBehaviour
     public string[] itemsTypeShop = new string[19];//items type list
 
     //Array for Lab arrangement
-    public string[] itemsTypeLab = new string[19];//items type list
+    public string[] itemsTypeLab = new string[19];
+    //{ "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty" };//items type list
 
     //Save coins
-    public int coins;
+    public int coins=250;
     public Text CoinsTXT;
 
     //Reference to change scriptable objects at runtime
@@ -126,6 +127,7 @@ public class ShopManagerScript : MonoBehaviour
     {
         Load(); //load data from previous save
         Debug.Log(">> Shop is saved on enable.");
+        Debug.Log(">> itemsTypeLab" + itemsTypeLab.Length);
     }
 
     //Third to be called
@@ -133,17 +135,19 @@ public class ShopManagerScript : MonoBehaviour
     {
         ReadShopTypes();//itemsTypeShop
         //TODO when the list is empty or new this function is necessary, check if need to save isRead for next session
-        ReadLabTypes();
+        ReadLabTypes();//Read the lab types
         UpdateShopBatches();//using dictionary values loaded to update the number of batches
 
         //start with EasyFileSave to load and save data in the game during runtime
         myFile = new EasyFileSave();
-        myFile.suppressWarning = false;
+        //myFile.suppressWarning = false;
 
         //delete is only activated if the game starts from the beginning each time.
         //myFile.Delete();
         UpdateShopLabels();
+
         Debug.Log(">> Shop is started." + "\n");
+        Debug.Log(">> ItemsLab after shop started" + itemsTypeLab.Length);
 
         //Chat System
         chatManager = GameObject.Find("ChatManager");
@@ -213,7 +217,40 @@ public class ShopManagerScript : MonoBehaviour
     //TODO this was necessary for the first creation of the list, check if it works always
     public void ReadLabTypes()
     {
-        if (isRead)
+        Debug.Log("items count from readLabTypes" + itemsTypeLab.Count());
+
+        //if (isRead && itemsTypeLab.Length==0)
+        //{
+        //    Debug.Log("isread" + isRead+ "but the lenght is 0");
+
+        //    itemsTypeLab = new string[19];
+        //    for (int i = 1; i < 19; i++)
+        //    {
+        //        //when is called for the first time, start lab as in the shop
+        //        if (itemsTypeLab[i]==null || itemsTypeLab[i]=="")
+        //        {
+        //            itemsTypeLab[i] = "Empty";
+        //            isRead = true;
+        //            Debug.Log("reading types for lab for the first time");
+        //        }
+        //        else
+        //        {
+        //            //itemsTypeLab[i] = itemsTypeShop[i];
+        //            //itemsTypeLab[i] = itemsTypeLab
+        //            //Debug.Log("reading types from last session");
+        //        }
+        //        //itemsTypeLab[i] = "Empty";// itemsTypeLab[i] = itemsTypeShop[i]; 
+        //    }
+        //    //when is called for the first time, start lab as in the shop
+        //    //itemsTypeLab = new string[19] { "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty" };
+        //    //Debug.Log("number of items in array" + itemsTypeLab.Count());
+        //    //isRead = true;
+        //    //Debug.Log("reading types for lab for the first time");
+        //    Debug.Log("number of items in array" + itemsTypeLab.Count()+ itemsTypeLab[1].ToString());
+        //}
+
+
+        if (isRead)//TODO false to debug
         {
             Debug.Log("reading types from last session");
             //for (int i = 1; i < 19; i++)
@@ -226,29 +263,52 @@ public class ShopManagerScript : MonoBehaviour
             //    }
             //    //else()
             //}
-                
+
             return;
 
         }
 
-        itemsTypeLab = new string[19];
-
-        for (int i = 1; i < 19; i++)
+        else if (isRead && (itemsTypeLab == null || itemsTypeLab[1] == ""))
         {
-            //when is called for the first time, start lab as in the shop
-            if (itemsTypeLab[i] == null)
+            Debug.Log("is read" + isRead + "but the list is empty");
+
+            for (int i = 1; i < 19; i++)
             {
-                itemsTypeLab[i] = "Empty";
-                isRead = true;
-                Debug.Log("reading types for lab for the first time");
+                //when is called for the first time, start lab as in the shop
+                if (itemsTypeLab[i] == null || itemsTypeLab[i] == "")
+                {
+                    itemsTypeLab[i] = "Empty";
+                    isRead = true;
+                    Debug.Log("filling the empty lab items");
+                }
+                else
+                {
+                    Debug.Log("check error");
+
+                }
             }
-            else
+        }
+        else if (!isRead)
+        {
+            Debug.Log("Read for the first time LabTypes");
+            itemsTypeLab = new string[19];// set the lenght of the array
+            for (int i = 1; i < 19; i++)
             {
-                //itemsTypeLab[i] = itemsTypeShop[i];
-                //itemsTypeLab[i] = itemsTypeLab
-                //Debug.Log("reading types from last session");
-            }
-                //itemsTypeLab[i] = "Empty";// itemsTypeLab[i] = itemsTypeShop[i]; 
+                //when is called for the first time, start lab as in the shop
+                if (itemsTypeLab[i] == null || itemsTypeLab[i] == "")
+                {
+                    itemsTypeLab[i] = "Empty";
+                    isRead = true;
+                    Debug.Log("reading types for lab for the first time");
+                }
+                else
+                {
+                    Debug.Log("check error");
+
+                }
+            } // fill in the array with "Empty" strings
+            Debug.Log("number of items in array" + itemsTypeLab.Count() + "with the string:  " + itemsTypeLab[1].ToString());
+
         }
 
 
@@ -269,6 +329,7 @@ public class ShopManagerScript : MonoBehaviour
 
     public void UpdateShopBatches()
     {
+        shopItemsQuantity = new int[19];//TODO test 17/11/22
         //use dictionary values to update the number of batches or shopquantity
         for (int i = 1; i < 19; i++)
 
@@ -356,15 +417,18 @@ public class ShopManagerScript : MonoBehaviour
     //Main Actions Shop
     public void Buy()
     {
+        Debug.Log("BUYING");
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
         if (ButtonRef.GetComponentInParent<ButtonInfo>().item != empty && ButtonRef.GetComponentInParent<ButtonInfo>().item != trace)
         {
             //Count the empty spaces in the lab to confirm there is space available
             int indexEmpty = Array.IndexOf(itemsTypeLab, "Empty");
 
+            //Debug.Log("empty spaces" + indexEmpty + "itemsTypeLab len"+itemsTypeLab.Length);
+
             if (coins >= ButtonRef.GetComponentInParent<ButtonInfo>().item.buyprice && indexEmpty>=0)//J added indexEmpty as condition
             {
-                ButtonRef.GetComponentInParent<Audiocontroller>().PlayBuy();//Play Audio
+                //ButtonRef.GetComponentInParent<Audiocontroller>().PlayBuy();//Play Audio //TODO
                 ButtonRef.GetComponentInParent<FXController_Shop>().PlayBuy();//Play Animation
                 
 
@@ -478,17 +542,20 @@ public class ShopManagerScript : MonoBehaviour
 
     public void Sell()
     {
+        Debug.Log("SELLING");
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
 
         //TODO check trace condition for the final prototype
         if (ButtonRef.GetComponentInParent<ButtonInfo>().item != empty && ButtonRef.GetComponentInParent<ButtonInfo>().item != trace)
         {
+            Debug.Log("item is:");
+
             if (ButtonRef.GetComponentInParent<ButtonInfo>().ItemID > 0)
             {
                 if (shopItemsQuantity[ButtonRef.GetComponentInParent<ButtonInfo>().ItemID] > 0)
                 {
-
-                    ButtonRef.GetComponentInParent<Audiocontroller>().PlaySell();//play audio
+                    Debug.Log("SELL item");
+                    //ButtonRef.GetComponentInParent<Audiocontroller>().PlaySell();//play audio //TODO
                     ButtonRef.GetComponentInParent<FXController_Shop>().PlaySell();//FX
 
                     coins += ButtonRef.GetComponentInParent<ButtonInfo>().item.sellprice;
@@ -758,8 +825,10 @@ public class ShopManagerScript : MonoBehaviour
             for (int i = 1; i < 19; i++)
             {
                 itemsTypeLab = myFile.GetArray<string>("itemsTypeLab");
+                //itemsTypeLab = new string[19] { "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty" };//items type list
+                //Debug.Log("itemstypelab count from load"+itemsTypeLab.Count());
 
-                //shopItemsQuantity = myFile.GetArray<int>("shopItemsQuantity");
+                shopItemsQuantity = myFile.GetArray<int>("shopItemsQuantity");
                 //Debug.Log("get items quantity");
                 //itemsTypeShop = myFile.GetArray<string>("itemsTypeShop");
 
@@ -773,7 +842,7 @@ public class ShopManagerScript : MonoBehaviour
 
             //Static bool to check if Labtypes where read once
             isRead = myFile.GetBool("isRead");
-            //Debug.Log("it is read"+isRead);
+            //Debug.Log("it is read from load" + isRead);
         }
 
         //Debug.Log("inventories loaded" + inventories);

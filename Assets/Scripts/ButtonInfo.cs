@@ -53,6 +53,7 @@ public class ButtonInfo : MonoBehaviour
 
     public void UpdateComponents()//assign variables name, price etc. Called from Shopmanager
     {
+        //Debug.Log("updating items");
         if (item != null)
         {
             name_item.text = item.name_item;
