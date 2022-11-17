@@ -283,7 +283,7 @@ public class ProgressBar : MonoBehaviour
                 {
 
                     //**
-                    audiocontroller.StopHeat();
+                    //audiocontroller.StopHeat();//TODO removed on 17/11/22 bug on sound in Android
                     Debug.Log("the sound of heat is off");
                 }
 

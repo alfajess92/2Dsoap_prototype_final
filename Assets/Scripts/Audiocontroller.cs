@@ -44,7 +44,7 @@ public class Audiocontroller : MonoBehaviour
     void Start()
     {
         globalAudioController = GameObject.Find("Sounds").GetComponent<GlobalAudioController>();
-        //Debug.Log("found button in every button");
+        //Debug.Log("found button sounds button");
         //GetComponentInChildren<Button>().onClick.AddListener(playHeat);
 
     }

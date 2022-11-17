@@ -53,8 +53,8 @@ public class DraggableComponent : MonoBehaviour, IInitializePotentialDragHandler
         Debug.Log("OnBeginDrag");
         ReduceTransparency();
 
-        //TEST audio
-        audiocontroller.PlayMoveItem();
+        
+        //audiocontroller.PlayMoveItem();//TODO removed on 17/11/22 bug on sound in Android
 
     }
 

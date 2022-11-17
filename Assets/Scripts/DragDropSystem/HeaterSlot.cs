@@ -89,7 +89,7 @@ public class HeaterSlot : EquipmentSlot
                         if (itemX < limita && inventoryDictionary.inventory["Sunflower oil"] == inventoryDictionary.inventory[DropArea.item.name_item])
                         {
                             //Audio and FX
-                            audiocontroller.PlayDrop();
+                            //audiocontroller.PlayDrop();//TODO removed on 17/11/22 bug on sound in Android
                             fXController.PlayDrop();//TODO test check if this works
 
                             inventoryDictionary.inventory[DropArea.item.name_item]++;
@@ -103,7 +103,7 @@ public class HeaterSlot : EquipmentSlot
                         else if (itemY < limita && inventoryDictionary.inventory["Lye Solution"] == inventoryDictionary.inventory[DropArea.item.name_item])
                         {
                             //Audio
-                            audiocontroller.PlayDrop();
+                            //audiocontroller.PlayDrop();//TODO removed on 17/11/22 bug on sound in Android
                             fXController.PlayDrop();//TODO test check if this works
 
                             inventoryDictionary.inventory[DropArea.item.name_item]++;
