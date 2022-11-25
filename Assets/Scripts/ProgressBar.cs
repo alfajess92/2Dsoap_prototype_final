@@ -102,6 +102,7 @@ public class ProgressBar : MonoBehaviour
 
         inventoryDictionary = GetComponentInParent<InventoryDictionary>();
 
+        
         processTime = TimeTickSystem.tickinseconds;//set the process to the TICK MAX 
         buttonInfoLab = GetComponentInParent<ButtonInfoLab>();
 
@@ -245,7 +246,6 @@ public class ProgressBar : MonoBehaviour
     private void TimeTickSystem_OnTick(object sender, TimeTickSystem.OnTickEventArgs e)
     {
         
-
         if (isUpdating&&isOff)
         {
             //Check if random items that modify processtimes are bought

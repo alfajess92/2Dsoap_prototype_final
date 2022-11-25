@@ -8918,6 +8918,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mute
       objectReference: {fileID: 0}
+    - target: {fileID: 553841701618294443, guid: b7de4d50dde16498b887d15ad7c36223,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 553841701618294454, guid: b7de4d50dde16498b887d15ad7c36223,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

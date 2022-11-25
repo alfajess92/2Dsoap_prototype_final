@@ -40,6 +40,7 @@ public class LabManagerScript : MonoBehaviour
 
         //public int progress = 0;
         public int progress;
+        public int startTimeProgress;
     }
 
     //1D array
@@ -517,6 +518,7 @@ public class LabManagerScript : MonoBehaviour
 
             // Add the progress time to the inventory of each item, this value is read then  by progressbar on the equipment
             inventoryDictionaries[i].inventory["Process"] = resultC.progress;
+            //inventoryDictionaries[i].inventory["StartTimeProgress"] = resultC.startTimeProgress;//TODO to fix timer
             //TEST BUG switching scenes
             inventoryDictionaries[i].inventory["Colorant"] = resultC.amount1;
             inventoryDictionaries[i].inventory["Fragrance"] = resultC.amount2;
@@ -527,9 +529,14 @@ public class LabManagerScript : MonoBehaviour
             {
                 //Debug.Log("Find an ongoing process in curing form");
                 ProgressBar progressBar = labItemsList[i].GetComponentInChildren<ProgressBar>();
+
+                //TEST if resting the startTimeofProgress helps- need to find a way to register when a process starts.
+                //int progressCalc = resultC.progress - resultC.startTimeProgress;
+                //progressBar.progressTick = progressCalc;
+
                 progressBar.progressTick = resultC.progress;
 
-                //Debug.Log("progress bar tick" + progressBar.progressTick + "curing");
+                Debug.Log("progress bar tick" + progressBar.progressTick + "curing");
 
 
                 equipmentSlot.ActivateProgressBar();
@@ -571,6 +578,8 @@ public class LabManagerScript : MonoBehaviour
             //if there was a progress ongoing, activate the progressbar and update the slider accordingly
             if (resultH.progress > 0)
             {
+                //Check the difference in time from the start of the process until now;                
+
                 //Debug.Log("Find an ongoing process in heater");
                 ProgressBar progressBar = labItemsList[i].GetComponentInChildren<ProgressBar>();
                 progressBar.progressTick = resultH.progress;
@@ -819,6 +828,8 @@ public class LabManagerScript : MonoBehaviour
             //if (inventoryDictionaries[i].inventory.Count <= 0)
             //if(labItemsInventory[i]!=null)
 
+            
+
             if (labItemsInventory[i].Container.Count <= 0)
             {
                 //Debug.Log("this is the perro" + inventoryDictionaries[9].inventory["Process"]);
@@ -833,7 +844,10 @@ public class LabManagerScript : MonoBehaviour
                     amount2 = 0,
                     amount3 = 0,
                     //if the process starts, the amounts are zero but the process is recorded
-                    progress = inventoryDictionaries[i].inventory["Process"]
+                    progress = inventoryDictionaries[i].inventory["Process"],
+
+                    //Save the time when the progress started
+                    //startTimeProgress = inventoryDictionaries[i].inventory["StartTimeProgress"]//TODO to fix timer
 
                 });
             }

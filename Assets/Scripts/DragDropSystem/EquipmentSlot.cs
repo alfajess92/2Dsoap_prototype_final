@@ -42,6 +42,7 @@ public class EquipmentSlot : MonoBehaviour
     //TEST to track what is dropped in the equipment and save the data
     public InventoryDictionary inventoryDictionary;
 
+    //public static System.DateTime startTimeProgress;//TODO to register when a process in the equipment starts, needs to be saved as well 
 
     //virtual means, use the extended class's version if it has one otherwise use this base class's version
     protected virtual void Awake()
@@ -181,6 +182,9 @@ public class EquipmentSlot : MonoBehaviour
     //Progress bar
     public void ActivateProgressBar()
     {
+        //startTimeProgress= System.DateTime.Now;// registers when the time of the progress starts
+        //Debug.Log("startTimeProgress"+startTimeProgress);
+
         progressBar.CallClock();
         progressBar.isUpdating = true;
         progressBar.isOff = true;

@@ -113,6 +113,11 @@ public class ShopManagerScript : MonoBehaviour
     public GlobalAudioController globalAudioController;
 
 
+    //Time
+    //private static System.DateTime startTime = System.DateTime.Now;
+
+
+
     //First to be called
     //Reference: https://docs.unity3d.com/Manual/ExecutionOrder.html
     void Awake()
@@ -250,25 +255,8 @@ public class ShopManagerScript : MonoBehaviour
         //}
 
 
-        if (isRead)//TODO false to debug
-        {
-            Debug.Log("reading types from last session");
-            //for (int i = 1; i < 19; i++)
-            //{
-            //    itemsTypeLab = new string[19];
-            //    if (itemsTypeLab[i] == null)
-            //    {
-            //        itemsTypeLab[i] = "Empty";
-            //        Debug.Log("catching initial error");
-            //    }
-            //    //else()
-            //}
 
-            return;
-
-        }
-
-        else if (isRead && (itemsTypeLab == null || itemsTypeLab[1] == ""))
+        if (isRead && (itemsTypeLab == null || itemsTypeLab[1] == "") || itemsTypeLab.Length==0)
         {
             Debug.Log("is read" + isRead + "but the list is empty");
 
@@ -287,6 +275,23 @@ public class ShopManagerScript : MonoBehaviour
 
                 }
             }
+        }
+        else if (isRead)//TODO false to debug
+        {
+            Debug.Log("reading types from last session");
+            //for (int i = 1; i < 19; i++)
+            //{
+            //    itemsTypeLab = new string[19];
+            //    if (itemsTypeLab[i] == null)
+            //    {
+            //        itemsTypeLab[i] = "Empty";
+            //        Debug.Log("catching initial error");
+            //    }
+            //    //else()
+            //}
+
+            return;
+
         }
         else if (!isRead)
         {
@@ -763,7 +768,14 @@ public class ShopManagerScript : MonoBehaviour
     //saving data with EasyFileSave
     public void Save()
     {
-        
+        //System.TimeSpan deltaTime = System.DateTime.Now - startTime;
+        //var timenow = System.DateTime.Now;
+        //TimeSpan deltaTime = timenow - startTime;
+
+        //var deltaTimeInSeconds = (int)deltaTime.TotalSeconds;
+        //print("this is the time now:" + timenow + "startime" + startTime + "deltatime" + deltaTime+ "total seconds"+deltaTimeInSeconds);
+
+
         CountTotalItemsShop();//Count and update the ShopDictionary
         //inventories = RecordItemsInventoryShop();
         EasyFileSave myFile = new EasyFileSave();
